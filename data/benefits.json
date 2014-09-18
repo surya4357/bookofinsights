@@ -1,0 +1,251 @@
+{
+  "participantBenefitElections": {
+    "currentElection": {
+      "qualifyingEventCodeName": "Annual Enrollment",
+      "sectionLabelName": "Current Benefits",
+      "elections": [
+        {
+          "typeCodeName": "Medical",
+          "startDate": "2014-06-01",
+          "optedNumber": 7,
+          "coverageLevelCode": {
+            "codeValue": "fm",
+            "shortName": "Family"
+          },
+          "coveredParticipantFormattedNames": [
+            "Danny Ocean",
+            "Mary Ocean"
+          ],
+          "electionDetails": [
+            {
+              "labelName": "Current Enrolled Plan:",
+              "values": [
+                "Southwest PPO"
+              ]
+            },
+            {
+              "labelName": "Monthly Deduction",
+              "values": [
+                "$283.32"
+              ]
+            }
+          ]
+        },
+        {
+          "typeCodeName": "Dental",
+          "startDate": "2014-06-01",
+          "optedNumber": 4,
+          "coverageLevelCode": {
+            "codeValue": "fm",
+            "shortName": "Family"
+          },
+          "coveredParticipantFormattedNames": [
+            "Danny Ocean",
+            "Mary Ocean"
+          ],
+          "electionDetails": [
+            {
+              "labelName": "Current Enrolled Plan:",
+              "values": [
+                "Dental PPO Option 1"
+              ]
+            },
+            {
+              "labelName": "Monthly Deduction",
+              "values": [
+                "$28.33"
+              ]
+            }
+          ]
+        },
+        {
+          "typeCodeName": "Vision",
+          "startDate": "2014-07-01",
+          "optedNumber": 5,
+          "coverageLevelCode": {
+            "codeValue": "fm",
+            "shortName": "Family"
+          },
+          "coveredParticipantFormattedNames": [
+            "Danny Ocean",
+            "Mary Ocean"
+          ],
+          "electionDetails": [
+            {
+              "labelName": "Current Enrolled Plan:",
+              "values": [
+                "Basic Eye Care"
+              ]
+            },
+            {
+              "labelName": "Monthly Deduction",
+              "values": [
+                "$28.33"
+              ]
+            }
+          ]
+        },
+        {
+          "typeCodeName": "Disability",
+          "startDate": "2014-08-01",
+          "optedNumber": 5,
+          "coverageLevelCode": {
+            "codeValue": "sg",
+            "shortName": "Single"
+          },
+          "electionDetails": [
+            {
+              "labelName": "Current Enrolled Plan:",
+              "values": [
+                "50% Income Replacement"
+              ]
+            },
+            {
+              "labelName": "Monthly Deduction",
+              "values": [
+                "$28.33"
+              ]
+            }
+          ]
+        },
+        {
+          "typeCodeName": "Life Insurance",
+          "startDate": "2014-09-01",
+          "optedNumber": 4,
+          "electionDetails": [
+            {
+              "labelName": "Current Enrolled Plan:",
+              "values": [
+                "Health Care FSA"
+              ]
+            },
+            {
+              "labelName": "Goal Amount",
+              "values": [
+                "$1590.00"
+              ]
+            }
+          ]
+        },
+        {
+          "typeCodeName": "Child Care",
+          "startDate": "2014-09-01",
+          "optedNumber": 2,
+          "electionDetails": [
+            {
+              "labelName": "Current Enrolled Plan:",
+              "values": [
+                "Dependent Care FSA"
+              ]
+            },
+            {
+              "labelName": "Goal Amount",
+              "values": [
+                "$2600.00"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "futureElection": {
+      "qualifyingEventCodeName": "Annual Enrollment",
+      "sectionLabelName": "Upcoming Benefits",
+      "elections": [
+        {
+          "typeCodeName": "Medical",
+          "effectiveDate": "2012-01-01",
+          "coverageLevelCode": {
+            "codeValue": "fm",
+            "shortName": "Family"
+          },
+          "coveredParticipantFormattedNames": [
+            "Danny Ocean",
+            "Mary Ocean"
+          ],
+          "electionDetails": [
+            {
+              "labelName": "Current Enrolled Plan:",
+              "values": [
+                "Southwest PPO"
+              ]
+            },
+            {
+              "labelName": "Monthly Deduction",
+              "values": [
+                "$283.32"
+              ]
+            }
+          ]
+        },
+        {
+          "typeCodeName": "Dental",
+          "effectiveDate": "2012-01-01",
+          "coverageLevelCode": {
+            "codeValue": "fm",
+            "shortName": "Family"
+          },
+          "coveredParticipantFormattedNames": [
+            "Danny Ocean",
+            "Mary Ocean"
+          ],
+          "electionDetails": [
+            {
+              "labelName": "Current Enrolled Plan:",
+              "values": [
+                "Southwest Dental"
+              ]
+            },
+            {
+              "labelName": "Monthly Deduction",
+              "values": [
+                "$25.50"
+              ]
+            }
+          ]
+        },
+        {
+          "typeCodeName": "Long Term Disability",
+          "effectiveDate": "2012-01-01",
+          "coverageLevelCode": {
+            "codeValue": "sg",
+            "shortName": "Single"
+          },
+          "electionDetails": [
+            {
+              "labelName": "Current Enrolled Plan:",
+              "values": [
+                "50% Income Replacement"
+              ]
+            },
+            {
+              "labelName": "Monthly Deduction",
+              "values": [
+                "$50.00"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "meta": {
+      "actions": [
+        {
+          "operationID": "benefits.enroll",
+          "canonicalUri": "/benefits/benefitsManagement/benefitsElectionManagement/annualEnrollmentManagement/benefit.enroll",
+          "actionTypeCode": "callback",
+          "confirmationRequiredIndicator": false,
+          "commentAllowedIndicator": false,
+          "links": [
+            {
+              "rel": "/adp/invoke",
+              "title": "Annual Enrollment",
+              "href": "/processes/benefits/v1/annualEnrollment",
+              "method": "GET"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

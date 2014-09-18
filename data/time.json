@@ -1,0 +1,757 @@
+{
+   "timeEntryDetails": 
+  {
+     "timeConfiguration": [ 
+      {
+         "positionID": 
+        {
+           "id": "11000199-1",
+           "schemeName": "PFID",
+           "schemeAgencyName": "ADP Registry" 
+        },
+         "clockReferenceDateTime": "2013-03-15T16:02:33-05:00",
+         "timeNotationCode": "12h",
+         "clockPolicy": 
+        {
+           "entryButtons": [ 
+            {
+               "actionCode": "punch",
+               "enableIndicator": true,
+               "labelName": "Punch" 
+            },
+             
+            {
+               "actionCode": "lunchout",
+               "enableIndicator": true,
+               "labelName": "Lunch Out" 
+            },
+             
+            {
+               "actionCode": "transfer",
+               "enableIndicator": true,
+               "labelName": "Transfer" 
+            } 
+          ],
+           "entryTypeCode": "clockEntry",
+           "policyExpireDateTime": "2013-03-15T14:23:55-05:00",
+           "validGeoLocations": [ 
+            {
+               "id": "CAM",
+               "coordinate": 
+              {
+                 "longitude": -119.001215,
+                 "latitude": 34.212078 
+              },
+               "range": 
+              {
+                 "unitValue": 1,
+                 "unitCode": "miles" 
+              } 
+            },
+             
+            {
+               "id": "Home2",
+               "coordinate": 
+              {
+                 "longitude": -118.354816,
+                 "latitude": 33.841217 
+              },
+               "range": 
+              {
+                 "unitValue": 1,
+                 "unitCode": "miles" 
+              } 
+            },
+             
+            {
+               "id": "Home",
+               "coordinate": 
+              {
+                 "longitude": -118.950313,
+                 "latitude": 34.157807 
+              },
+               "range": 
+              {
+                 "unitValue": 100,
+                 "unitCode": "meters" 
+              } 
+            },
+             
+            {
+               "id": "Roseland",
+               "coordinate": 
+              {
+                 "longitude": -74.303347,
+                 "latitude": 40.817535 
+              },
+               "range": 
+              {
+                 "unitValue": 2,
+                 "unitCode": "miles" 
+              } 
+            },
+             
+            {
+               "id": "Home3",
+               "coordinate": 
+              {
+                 "longitude": -77.465451,
+                 "latitude": 39.054378 
+              },
+               "range": 
+              {
+                 "unitValue": 2,
+                 "unitCode": "miles" 
+              } 
+            } 
+          ],
+           "allowBypassIndicator": true 
+        },
+         "earningEntryPolicy": 
+        {
+           "entryCodes": [ 
+            {
+               "code": "W",
+               "codeName": "Worked",
+               "entryTypeCode": "timepairEntry",
+               "defaultIndicator": true 
+            },
+             
+            {
+               "code": "S",
+               "codeName": "Sick",
+               "entryTypeCode": "timepairEntry",
+               "defaultIndicator": false 
+            },
+             
+            {
+               "code": "J",
+               "codeName": "Jury Duty",
+               "entryTypeCode": "timepairEntry",
+               "defaultIndicator": false 
+            },
+             
+            {
+               "code": "V",
+               "codeName": "Vacation",
+               "entryTypeCode": "timepairEntry",
+               "defaultIndicator": false 
+            },
+             
+            {
+               "code": "P",
+               "codeName": "Personal",
+               "entryTypeCode": "timepairEntry",
+               "defaultIndicator": false 
+            },
+             
+            {
+               "code": "B",
+               "codeName": "Bereavement",
+               "entryTypeCode": "timepairEntry",
+               "defaultIndicator": false 
+            },
+             
+            {
+               "code": "M",
+               "codeName": "Mileage",
+               "entryTypeCode": "unitEntry",
+               "rateAmount": 
+              {
+                 "amountValue": 1.5,
+                 "currencyCode": "USD",
+                 "unitCode": "mile" 
+              },
+               "defaultIndicator": false 
+            },
+             
+            {
+               "code": "T",
+               "codeName": "Tips",
+               "entryTypeCode": "amountEntry",
+               "defaultIndicator": false 
+            } 
+          ],
+           "hourPrecision": "hh",
+           "viewableTimePeriod": 
+          {
+             "startDateTime": "2013-03-04T09:00:00-0500",
+             "endDateTime": "2013-03-22T17:00:00-0400" 
+          },
+           "createTimePeriod": 
+          {
+             "startDateTime": "2013-03-11T09:00:00-0400",
+             "endDateTime": "2013-03-22T17:00:00-0400" 
+          } 
+        },
+         "absencePolicy": 
+        {
+           "entitlementIndicator": true,
+           "validationTables": [ 
+            {
+               "labelName": "Absence Reason",
+               "tableID": "absenceReason",
+               "typeCode": "absenceReason",
+               "requiredIndicator": true,
+               "tableUri": 
+              {
+                 "href": "/v1_0/O/G4O73G9Z62SL2NFM/table/absenceReason" 
+              } 
+            } 
+          ] 
+        },
+         "lateArrivalPolicy": 
+        {
+           "entitlementIndicator": true 
+        } 
+      } 
+    ],
+     "entrySummary": [ 
+      {
+         "timeSheetID": "22",
+         "positionID": 
+        {
+           "id": "11000199-1",
+           "schemeName": "PFID",
+           "schemeAgencyName": "ADP Registry" 
+        },
+         "payPeriod": 
+        {
+           "payPeriodID": "prev",
+           "labelName": "Previous",
+           "startDate": "2013-03-04",
+           "endDate": "2013-03-08" 
+        },
+         "totalPayPeriodHours": "PT40H",
+         "timeSheetStatus": 
+        {
+           "code": "supapproved",
+           "labelName": "Supervisor Approved" 
+        },
+         "entries": [ 
+          {
+             "entryDate": "2013-03-04",
+             "entryDetail": [ 
+              {
+                 "timePairSummary": [ 
+                  {
+                     "entryID": "5032",
+                     "codeName": "Worked",
+                     "timePeriod": 
+                    {
+                       "startDateTime": "2013-03-04T09:00:00-05:00",
+                       "endDateTime": "2013-03-04T17:00:00-05:00" 
+                    },
+                     "entryUri": 
+                    {
+                       "href": "/v1_0/O/G4O73G9Z62SL2NFM/timeEntry/5032" 
+                    },
+                     "metadataEntitlementCodes": [ "r" 
+                    ] 
+                  } 
+                ] 
+              } 
+            ] 
+          },
+           
+          {
+             "entryDate": "2013-03-05",
+             "entryDetail": [ 
+              {
+                 "timePairSummary": [ 
+                  {
+                     "entryID": "5033",
+                     "codeName": "Worked",
+                     "timePeriod": 
+                    {
+                       "startDateTime": "2013-03-05T09:00:00-05:00",
+                       "endDateTime": "2013-03-05T17:00:00-05:00" 
+                    },
+                     "entryUri": 
+                    {
+                       "href": "/v1_0/O/G4O73G9Z62SL2NFM/timeEntry/5033" 
+                    },
+                     "metadataEntitlementCodes": [ "r" 
+                    ] 
+                  } 
+                ] 
+              } 
+            ] 
+          },
+           
+          {
+             "entryDate": "2013-03-06",
+             "entryDetail": [ 
+              {
+                 "timePairSummary": [ 
+                  {
+                     "entryID": "5034",
+                     "codeName": "Worked",
+                     "timePeriod": 
+                    {
+                       "startDateTime": "2013-03-06T09:00:00-05:00",
+                       "endDateTime": "2013-03-06T17:00:00-05:00" 
+                    },
+                     "entryUri": 
+                    {
+                       "href": "/v1_0/O/G4O73G9Z62SL2NFM/timeEntry/5034" 
+                    },
+                     "metadataEntitlementCodes": [ "r" 
+                    ] 
+                  } 
+                ] 
+              } 
+            ] 
+          },
+           
+          {
+             "entryDate": "2013-03-07",
+             "entryDetail": [ 
+              {
+                 "timePairSummary": [ 
+                  {
+                     "entryID": "5035",
+                     "codeName": "Worked",
+                     "timePeriod": 
+                    {
+                       "startDateTime": "2013-03-07T09:00:00-05:00",
+                       "endDateTime": "2013-03-07T17:00:00-05:00" 
+                    },
+                     "entryUri": 
+                    {
+                       "href": "/v1_0/O/G4O73G9Z62SL2NFM/timeEntry/5035" 
+                    },
+                     "metadataEntitlementCodes": [ "r" 
+                    ] 
+                  } 
+                ] 
+              } 
+            ] 
+          },
+           
+          {
+             "entryDate": "2013-03-08",
+             "entryDetail": [ 
+              {
+                 "timePairSummary": [ 
+                  {
+                     "entryID": "5036",
+                     "codeName": "Worked",
+                     "timePeriod": 
+                    {
+                       "startDateTime": "2013-03-08T09:00:00-05:00",
+                       "endDateTime": "2013-03-08T17:00:00-05:00" 
+                    },
+                     "entryUri": 
+                    {
+                       "href": "/v1_0/O/G4O73G9Z62SL2NFM/timeEntry/5036" 
+                    },
+                     "metadataEntitlementCodes": [ "r" 
+                    ] 
+                  } 
+                ] 
+              } 
+            ] 
+          } 
+        ] 
+      },
+       
+      {
+         "timeSheetID": "23",
+         "positionID": 
+        {
+           "id": "11000199-1",
+           "schemeName": "PFID",
+           "schemeAgencyName": "ADP Registry" 
+        },
+         "payPeriod": 
+        {
+           "payPeriodID": "curr",
+           "labelName": "Current",
+           "startDate": "2013-03-11",
+           "endDate": "2013-03-15" 
+        },
+         "totalPayPeriodHours": "PT40H",
+         "timeSheetStatus": 
+        {
+           "code": "eeapproved",
+           "labelName": "Employee Approved" 
+        },
+         "meta": 
+        {
+           "actions": [ 
+            {
+               "operationID": "timeSheet.review",
+               "actionTypeCode": "callback",
+               "requestConfirmationIndicator": true,
+               "commentIndicator": true,
+               "colorCode": "80FF00",
+               "links": [ 
+                {
+                   "rel": "/adp/invoke",
+                   "href": "/time/v1/timeSheets/23/review",
+                   "method": "POST",
+                   "title": "Approve Time Sheet",
+                   "arguments": [ 
+                    {
+                       "propertyUri": 
+                      {
+                         "href": "/associateID/idValue" 
+                      },
+                       "propertyValue": "G4O73G9Z62SL2NFM" 
+                    },
+                     
+                    {
+                       "propertyUri": 
+                      {
+                         "href": "/associateID/schemeName" 
+                      },
+                       "propertyValue": "Associate OID" 
+                    },
+                     
+                    {
+                       "propertyUri": 
+                      {
+                         "href": "/associateID/schemeAgencyName" 
+                      },
+                       "propertyValue": "ADP Registry" 
+                    },
+                     
+                    {
+                       "propertyUri": 
+                      {
+                         "href": "/timeSheetStatus/code" 
+                      },
+                       "propertyValue": "approve" 
+                    } 
+                  ] 
+                } 
+              ] 
+            } 
+          ] 
+        },
+         "entries": [ 
+          {
+             "entryDate": "2013-03-11",
+             "entryDetail": [ 
+              {
+                 "timePairSummary": [ 
+                  {
+                     "entryID": "5037",
+                     "codeName": "Worked",
+                     "timePeriod": 
+                    {
+                       "startDateTime": "2013-03-11T09:00:00-04:00",
+                       "endDateTime": "2013-03-11T17:00:00-04:00" 
+                    },
+                     "entryUri": 
+                    {
+                       "href": "/v1_0/O/G4O73G9Z62SL2NFM/timeEntry/5037" 
+                    },
+                     "metadataEntitlementCodes": [ "r",
+                       "u",
+                       "d" 
+                    ] 
+                  } 
+                ] 
+              } 
+            ] 
+          },
+           
+          {
+             "entryDate": "2013-03-12",
+             "entryDetail": [ 
+              {
+                 "timePairSummary": [ 
+                  {
+                     "entryID": "5038",
+                     "codeName": "Worked",
+                     "timePeriod": 
+                    {
+                       "startDateTime": "2013-03-12T09:00:00-04:00",
+                       "endDateTime": "2013-03-12T17:00:00-04:00" 
+                    },
+                     "entryUri": 
+                    {
+                       "href": "/v1_0/O/G4O73G9Z62SL2NFM/timeEntry/5038" 
+                    },
+                     "metadataEntitlementCodes": [ "r",
+                       "u",
+                       "d" 
+                    ] 
+                  } 
+                ] 
+              } 
+            ] 
+          },
+           
+          {
+             "entryDate": "2013-03-13",
+             "entryDetail": [ 
+              {
+                 "timePairSummary": [ 
+                  {
+                     "entryID": "5039",
+                     "codeName": "Worked",
+                     "timePeriod": 
+                    {
+                       "startDateTime": "2013-03-13T09:00:00-04:00",
+                       "endDateTime": "2013-03-13T17:00:00-04:00" 
+                    },
+                     "entryUri": 
+                    {
+                       "href": "/v1_0/O/G4O73G9Z62SL2NFM/timeEntry/5039" 
+                    },
+                     "metadataEntitlementCodes": [ "r",
+                       "u",
+                       "d" 
+                    ] 
+                  } 
+                ],
+                 "clockSummary": 
+                {
+                   "clockEntries": [ 
+                    {
+                       "entryDateTime": "2013-03-13T17:00:00-04:00",
+                       "actionCode": "punch",
+                       "description": "End Shift" 
+                    },
+                     
+                    {
+                       "entryDateTime": "2013-03-13T09:00:00-04:00",
+                       "actionCode": "punch",
+                       "description": "Start Shift" 
+                    } 
+                  ] 
+                } 
+              } 
+            ] 
+          },
+           
+          {
+             "entryDate": "2013-03-14",
+             "entryDetail": [ 
+              {
+                 "timePairSummary": [ 
+                  {
+                     "entryID": "5040",
+                     "codeName": "Personal",
+                     "timePeriod": 
+                    {
+                       "startDateTime": "2013-03-14T09:00:00-04:00",
+                       "endDateTime": "2013-03-14T17:00:00-04:00" 
+                    },
+                     "entryUri": 
+                    {
+                       "href": "/v1_0/O/G4O73G9Z62SL2NFM/timeEntry/5040" 
+                    },
+                     "metadataEntitlementCodes": [ "r",
+                       "u",
+                       "d" 
+                    ] 
+                  } 
+                ] 
+              } 
+            ] 
+          },
+           
+          {
+             "entryDate": "2013-03-15",
+             "entryDetail": [ 
+              {
+                 "timePairSummary": [ 
+                  {
+                     "entryID": "5041",
+                     "codeName": "Worked",
+                     "timePeriod": 
+                    {
+                       "startDateTime": "2013-03-15T09:00:00-04:00",
+                       "endDateTime": "2013-03-15T17:00:00-04:00" 
+                    },
+                     "entryUri": 
+                    {
+                       "href": "/v1_0/O/G4O73G9Z62SL2NFM/timeEntry/5041" 
+                    },
+                     "metadataEntitlementCodes": [ "r",
+                       "u",
+                       "d" 
+                    ] 
+                  } 
+                ],
+                 "clockSummary": 
+                {
+                   "clockEntries": [ 
+                    {
+                       "entryDateTime": "2013-03-15T09:00:00-04:00",
+                       "actionCode": "punch",
+                       "description": "Start Shift" 
+                    } 
+                  ] 
+                } 
+              } 
+            ] 
+          } 
+        ] 
+      },
+       
+      {
+         "timeSheetID": "24",
+         "positionID": 
+        {
+           "id": "11000199-1",
+           "schemeName": "PFID",
+           "schemeAgencyName": "ADP Registry" 
+        },
+         "payPeriod": 
+        {
+           "payPeriodID": "next",
+           "labelName": "Next",
+           "startDate": "2013-03-18",
+           "endDate": "2013-03-22" 
+        },
+         "totalPayPeriodHours": "PT40H",
+         "timeSheetStatus": 
+        {
+           "code": "pending",
+           "labelName": "Pending" 
+        },
+         "entries": [ 
+          {
+             "entryDate": "2013-03-18",
+             "entryDetail": [ 
+              {
+                 "timePairSummary": [ 
+                  {
+                     "entryID": "5042",
+                     "codeName": "Worked",
+                     "timePeriod": 
+                    {
+                       "startDateTime": "2013-03-18T09:00:00-04:00",
+                       "endDateTime": "2013-03-18T17:00:00-04:00" 
+                    },
+                     "entryUri": 
+                    {
+                       "href": "/v1_0/O/G4O73G9Z62SL2NFM/timeEntry/5042" 
+                    },
+                     "metadataEntitlementCodes": [ "r",
+                       "u",
+                       "d" 
+                    ] 
+                  } 
+                ] 
+              } 
+            ] 
+          },
+           
+          {
+             "entryDate": "2013-03-19",
+             "entryDetail": [ 
+              {
+                 "timePairSummary": [ 
+                  {
+                     "entryID": "5043",
+                     "codeName": "Worked",
+                     "timePeriod": 
+                    {
+                       "startDateTime": "2013-03-19T09:00:00-04:00",
+                       "endDateTime": "2013-03-19T17:00:00-04:00" 
+                    },
+                     "entryUri": 
+                    {
+                       "href": "/v1_0/O/G4O73G9Z62SL2NFM/timeEntry/5043" 
+                    },
+                     "metadataEntitlementCodes": [ "r",
+                       "u",
+                       "d" 
+                    ] 
+                  } 
+                ] 
+              } 
+            ] 
+          },
+           
+          {
+             "entryDate": "2013-03-20",
+             "entryDetail": [ 
+              {
+                 "timePairSummary": [ 
+                  {
+                     "entryID": "5044",
+                     "codeName": "Worked",
+                     "timePeriod": 
+                    {
+                       "startDateTime": "2013-03-20T09:00:00-04:00",
+                       "endDateTime": "2013-03-20T17:00:00-04:00" 
+                    },
+                     "entryUri": 
+                    {
+                       "href": "/v1_0/O/G4O73G9Z62SL2NFM/timeEntry/5044" 
+                    },
+                     "metadataEntitlementCodes": [ "r",
+                       "u",
+                       "d" 
+                    ] 
+                  } 
+                ] 
+              } 
+            ] 
+          },
+           
+          {
+             "entryDate": "2013-03-21",
+             "entryDetail": [ 
+              {
+                 "timePairSummary": [ 
+                  {
+                     "entryID": "5045",
+                     "codeName": "Worked",
+                     "timePeriod": 
+                    {
+                       "startDateTime": "2013-03-21T09:00:00-04:00",
+                       "endDateTime": "2013-03-21T17:00:00-04:00" 
+                    },
+                     "entryUri": 
+                    {
+                       "href": "/v1_0/O/G4O73G9Z62SL2NFM/timeEntry/5045" 
+                    },
+                     "metadataEntitlementCodes": [ "r",
+                       "u",
+                       "d" 
+                    ] 
+                  } 
+                ] 
+              } 
+            ] 
+          },
+           
+          {
+             "entryDate": "2013-03-22",
+             "entryDetail": [ 
+              {
+                 "timePairSummary": [ 
+                  {
+                     "entryID": "5046",
+                     "codeName": "Worked",
+                     "timePeriod": 
+                    {
+                       "startDateTime": "2013-03-22T09:00:00-04:00",
+                       "endDateTime": "2013-03-22T17:00:00-04:00" 
+                    },
+                     "entryUri": 
+                    {
+                       "href": "/v1_0/O/G4O73G9Z62SL2NFM/timeEntry/5046" 
+                    },
+                     "metadataEntitlementCodes": [ "r",
+                       "u",
+                       "d" 
+                    ] 
+                  } 
+                ] 
+              } 
+            ] 
+          } 
+        ] 
+      } 
+    ] 
+  } 
+}

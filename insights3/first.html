@@ -1,0 +1,206 @@
+<script type="text/javascript">
+	$(function(){
+		$.getJSON('./data/workers.json', function(data){
+			var months = {
+				"1" : "January",
+				"2" : "February",
+				"3" : "March",
+				"4" : "April",
+				"5" : "May",
+				"6" : "June",
+				"7" : "July",
+				"8" : "August",
+				"9" : "September",
+				"10" : "October",
+				"11" : "November",
+				"12" : "December"
+			};
+
+			var workers={
+				"total_workers" : 0,
+				"January" : {
+						"no_of_workers" : 0,
+						"Auditor" : 0,
+						"Cashier" : 0,
+						"Child Care Worker" : 0,
+						"Chief Executive" : 0
+					},
+				"February" : {
+						"no_of_workers" : 0,
+						"Auditor" : 0,
+						"Cashier" : 0,
+						"Child Care Worker" : 0,
+						"Chief Executive" : 0
+					},
+				"March" : {
+						"no_of_workers" : 0,
+						"Auditor" : 0,
+						"Cashier" : 0,
+						"Child Care Worker" : 0,
+						"Chief Executive" : 0
+					},
+				"April" : {
+						"no_of_workers" : 0,
+						"Auditor" : 0,
+						"Cashier" : 0,
+						"Child Care Worker" : 0,
+						"Chief Executive" : 0
+					},
+				"May" : {
+						"no_of_workers" : 0,
+						"Auditor" : 0,
+						"Cashier" : 0,
+						"Child Care Worker" : 0,
+						"Chief Executive" : 0
+					},
+				"June" : {
+						"no_of_workers" : 0,
+						"Auditor" : 0,
+						"Cashier" : 0,
+						"Child Care Worker" : 0,
+						"Chief Executive" : 0
+					},
+				"July" : {
+						"no_of_workers" : 0,
+						"Auditor" : 0,
+						"Cashier" : 0,
+						"Child Care Worker" : 0,
+						"Chief Executive" : 0
+					},
+				"August" : {
+						"no_of_workers" : 0,
+						"Auditor" : 0,
+						"Cashier" : 0,
+						"Child Care Worker" : 0,
+						"Chief Executive" : 0
+					},
+				"September" : {
+						"no_of_workers" : 0,
+						"Auditor" : 0,
+						"Cashier" : 0,
+						"Child Care Worker" : 0,
+						"Chief Executive" : 0
+					},
+				"October" : {
+						"no_of_workers" : 0,
+						"Auditor" : 0,
+						"Cashier" : 0,
+						"Child Care Worker" : 0,
+						"Chief Executive" : 0
+					},
+				"November" : {
+						"no_of_workers" : 0,
+						"Auditor" : 0,
+						"Cashier" : 0,
+						"Child Care Worker" : 0,
+						"Chief Executive" : 0
+					},
+				"December" : {
+						"no_of_workers" : 0,
+						"Auditor" : 0,
+						"Cashier" : 0,
+						"Child Care Worker" : 0,
+						"Chief Executive" : 0
+					}
+			};
+
+			var no_of_workers=0, auditor=0, cashier=0, ccw=0, ce=0;
+
+			workers["total_workers"] = data.workers.length;
+			var curr_month = new Date().getMonth() + 1;
+
+
+			for(item in data.workers){
+				var month = months[parseInt(data.workers[item].workAssignments[0].actualStartDate.split('-')[1])];
+				workers[month]["no_of_workers"]++;
+				workers[month][data.workers[item].workAssignments[0].jobTitle]++;
+			}
+
+			for(m=1; m<=curr_month; m++){
+				var month = months[m];
+				workers[month]["no_of_workers"]+=no_of_workers;
+				workers[month]["Auditor"]+=auditor;
+				workers[month]["Cashier"]+=cashier;
+				workers[month]["Chief Executive"]+=ce;
+				workers[month]["Child Care Worker"]+=ccw;
+
+				no_of_workers = workers[month]["no_of_workers"];
+				auditor = workers[month]["Auditor"];
+				cashier = workers[month]["Cashier"];
+				ce = workers[month]["Chief Executive"];
+				ccw = workers[month]["Child Care Worker"];
+			}
+			console.log(workers);
+
+			var data_prev = {}, data_curr = {};
+			
+			$('#prevMonth').find("h4").html("Total Workers: "+workers[months[curr_month-1]]["no_of_workers"]);
+			$('#prevMonth').find("#childCare").html(workers[months[curr_month-1]]["Child Care Worker"]);
+			$('#prevMonth').find("#chiefExecutive").html(workers[months[curr_month-1]]["Chief Executive"]);
+			$('#prevMonth').find("#auditor").html(workers[months[curr_month-1]]["Auditor"]);
+			$('#prevMonth').find("#cashier").html(workers[months[curr_month-1]]["Cashier"]);
+
+			$('#nextMonth').find("h4").html("Total Workers: "+workers[months[curr_month]]["no_of_workers"]);
+			$('#nextMonth').find("#childCare").html(workers[months[curr_month]]["Child Care Worker"]);
+			$('#nextMonth').find("#chiefExecutive").html(workers[months[curr_month]]["Chief Executive"]);
+			$('#nextMonth').find("#auditor").html(workers[months[curr_month]]["Auditor"]);
+			$('#nextMonth').find("#cashier").html(workers[months[curr_month]]["Cashier"]);
+		});
+	});
+</script>
+<div id="workForce" class="panel panel-default col-md-6">
+	<div class="panel-head">
+		<h3>Work Force</h3>
+		<hr>
+	</div>
+
+	<div class="panel col-md-6">
+		<div class="panel-body" id="prevMonth">
+			<h4></h4>
+			<table class="table" style="color: whitesmoke; margin-bottom:0px;">
+				<tr>
+					<td>Child Care Workers:</td> 
+					<td id="childCare"></td>
+				</tr>
+				<tr>
+					<td>Chief Executives:</td>
+					<td id="chiefExecutive"></td>
+				</tr>
+				<tr>
+					<td>Auditors:</td> 
+					<td id="auditor"></td>
+				</tr>
+				<tr>
+					<td>Cashier:</td>
+					<td id="cashier"></td>
+				</tr>
+			</table>
+		</div>
+		<div style="text-align:center;"><h3>August</h3></div>
+	</div>
+	<div class="panel col-md-6">
+		<div class="panel-body" id="nextMonth">
+			<h4></h4>
+			<table class="table" style="color: whitesmoke; margin-bottom:0px;">
+				<tr>
+					<td>Child Care Workers:</td> 
+					<td id="childCare"></td>
+				</tr>
+				<tr>
+					<td>Chief Executives:</td>
+					<td id="chiefExecutive"></td>
+				</tr>
+				<tr>
+					<td>Auditors:</td> 
+					<td id="auditor"></td>
+				</tr>
+				<tr>
+					<td>Cashier:</td>
+					<td id="cashier"></td>
+				</tr>
+			</table>
+		</div>
+		<div style="text-align:center;"><h3>September</h3></div>
+	</div>
+</div>
+<div class="panel panel-default col-md-5 col-md-offset-1"></div>

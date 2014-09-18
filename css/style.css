@@ -1,0 +1,215 @@
+.navbar .navbar-inner{
+	padding: 0px;
+}
+
+.navbar .nav li a{
+	font-weight: bold;
+	text-align: center;
+	border-left: 1px solid rgba(255,255,255,.75);
+border-right: 1px solid rgba(0,0,0,.1);
+}
+.navbar .nav li:last-child a{
+	font-weight: bold;
+	text-align: center;
+	border: none;
+}
+
+.notch{
+	position: absolute;
+	top: 108px;
+	left: 45%;		
+	/*margin: 0;*/
+}
+
+#mainTabs li{
+	position: relative;
+	margin: 5px;
+}
+
+#mainTabs li .notch{
+	display: none;
+}
+
+#mainTabs li.active .notch{
+	display: block;
+}
+
+#namesNav{
+	border: 1px solid #ddd;
+	height: 100%;
+}
+
+.table>tbody>tr>td{
+	border: none;
+}
+
+.table{
+	width:auto;
+}
+
+.col-md-3{
+	padding-right: 0px;
+}
+
+.list-group-item:first-child, .list-group-item:last-child{
+	border-radius: 0px;
+}
+
+.list-group-item{
+	border-left: none;
+	border-right: none;
+}
+
+.tab-content{
+	overflow: hidden;
+}
+
+#prevMonth{
+	background-color: #9f00a7;
+	color: #ffffff;
+	text-align: center;
+}
+
+#nextMonth{
+	background-color: #9f00a7;
+	color: #ffffff;
+	text-align: center;
+}
+
+#map {
+	/*width: 500px;*/
+	height: 260px;
+}
+
+.info {
+	padding: 6px 8px;
+	font: 14px/16px Arial, Helvetica, sans-serif;
+	background: white;
+	background: rgba(255,255,255,0.8);
+	box-shadow: 0 0 15px rgba(0,0,0,0.2);
+	border-radius: 5px;
+}
+.info h4 {
+	margin: 0 0 5px;
+	color: #777;
+}
+
+.legend {
+	text-align: left;
+	line-height: 18px;
+	color: #555;
+}
+.legend i {
+	width: 18px;
+	height: 18px;
+	float: left;
+	margin-right: 8px;
+	opacity: 0.7;
+}
+
+.leaflet-control-attribution, .leaflet-control-zoom{
+	display:none;
+}
+
+.circle-text {
+    width:75%;
+    margin-top: 7%;
+    margin-left: 10%;
+}
+.circle-text:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height:0;
+    padding-bottom: 100%;
+    background: green; 
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+}
+.circle-text div {
+    float:left;
+    width:100%;
+    padding-top:50%;
+    line-height:1em;
+    margin-top:-0.5em;
+    text-align:center;
+    color:white;
+    font-size: 30px;
+}
+
+.icon{
+	font-size: 25px;
+	float: left;
+}
+
+.panel-title{
+	margin-left: 30px;
+	/*float: left;*/
+}
+
+
+
+
+/*****************************************************
+ * generic styling for ALS elements: outer container
+ ******************************************************/
+
+.als-container {
+	position: relative;
+	width: 100%;
+	margin: 0px auto;
+	z-index: 0;
+}
+
+/****************************************
+ * viewport styling
+ ***************************************/
+
+.als-viewport {
+	position: relative;
+	overflow: hidden;
+	margin: 0px auto;
+}
+
+/***************************************************
+ * wrapper styling
+ **************************************************/
+
+.als-wrapper {
+	position: relative;
+	/* if you are using a list with <ul> <li> */
+	list-style: none;
+}
+
+/*************************************
+ * item: single list element
+ ************************************/
+
+.als-item {
+	position: relative;
+	display: block;
+	text-align: center;
+	cursor: pointer;
+	float: left;
+}
+
+/***********************************************
+ * prev, next: buttons styling
+ **********************************************/
+ 
+/*.als-prev, .als-next {
+	position: absolute;
+	cursor: pointer;
+	clear: both;
+}*/
+
+.als-prev, .als-next {
+position: absolute;
+cursor: pointer;
+top: 35px;
+}
+
+.als-next{
+right: 20px;
+}

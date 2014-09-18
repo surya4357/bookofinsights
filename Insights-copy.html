@@ -1,0 +1,200 @@
+<!DOCTYPE Html>
+<html>
+	<head>
+		<title>Swipe Tabs</title>
+
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+
+   <link rel="stylesheet" type="text/css" href="./assets/css/bootmetro.css">
+   <link rel="stylesheet" type="text/css" href="./assets/css/jquery-ui.min.css">
+   <link rel="stylesheet" type="text/css" href="./assets/css/bootmetro-responsive.css">
+   <link rel="stylesheet" type="text/css" href="./assets/css/bootmetro-icons.css">
+   <link rel="stylesheet" type="text/css" href="./assets/css/bootmetro-ui-light.css">
+   <link rel="stylesheet" type="text/css" href="./assets/css/datepicker.css">
+   <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap-rating.css">
+
+
+
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min1.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/leaflet.css">
+		<!-- <link rel="stylesheet" type="text/css" href="css/leaflet.css"> -->
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/bootstrap.min1.js"></script>
+		<script src="js/jquery.mobile-1.4.2.min.js"></script>
+		
+		<script src="js/leaflet.js"></script>
+		<script src="js/us-states.js"></script>
+		<script src="js/jquery.als-1.6.min.js"></script>
+		<script src="js/jquery.formatCurrency.min.js"></script>
+	    <script src="js/custom/workers.js"></script>
+
+	    <script src="http://code.highcharts.com/highcharts.js"></script>
+		<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+		<script type="text/javascript" src="http://www.amcharts.com/lib/3/ammap.js"></script>
+		<script type="text/javascript" src="http://www.amcharts.com/lib/3/maps/js/usaLow.js"></script>		
+		<script type="text/javascript" src="http://www.amcharts.com/lib/3/amcharts.js"></script>
+		<script type="text/javascript" src="http://www.amcharts.com/lib/3/serial.js"></script>
+		<script type="text/javascript" src="http://www.amcharts.com/lib/3/pie.js"></script>
+		<script type="text/javascript" src="http://www.amcharts.com/lib/3/themes/light.js"></script>
+
+
+		<script type="text/javascript">
+			$(function(){
+				//alert("k");
+				$(".ui-loader").hide();
+				// var insights = [1, 2, 3];
+				// localStorage["insights"] = JSON.stringify(insights);
+
+				$.getJSON("/data/book.json", function(data){
+
+					var no_of_insights = data.Pages.length;
+					var slider=0;
+
+					var output = '<ul class="nav als-wrapper" id="mainTabs">';
+
+					var insights = JSON.parse(localStorage["Pages"]);
+					console.log(insights);
+					console.log("K");
+
+					for(i=0; i<insights.length; i++){
+						for(var item in data.Pages){
+							if(insights[i] == data.Pages[item].id){
+								output += '<li id='+ data.Pages[item].id +' class="als-item"><a data-toggle="tab" href="#tab-'+ data.Pages[item].id +'"><div class="main-menu" style="font-weight:3pt;"><img src="'+data.Pages[item].img+'"/></div><p class="smallBold">' + data.Pages[item].title + '</p></a><img class="notch" src="notch.png" ></li>';
+							}
+						}
+					}
+
+					output += "</ul>";
+					$('.tab-menu').html(output);
+					var string = location.href.split('?');
+					var url = string[1];
+					if(url)
+					{
+						for(item in data.Pages){
+							if(data.Pages[item].id == url)
+							{
+								console.log(data.Pages[item].id);
+								$('#'+data.Pages[item].id).addClass('active');
+								$.get('insights/'+data.Pages[item].url, function(content){
+									$('.tab-content').html("<div id='"+data.Pages[item].id+"' class='tab-pane fade in active'>"+content+"</div>");
+								});
+								break;
+							}
+						}
+					}
+					else
+					{
+						$('#'+data.Pages[0].id).addClass("active");
+						$.get('insights/'+data.Pages[0].url, function(content){
+							$('.tab-content').html("<div id='1' class='tab-pane fade in active'>"+content+"</div>");
+						});
+					}
+					
+
+					$("#mainTabs").on("click", "a", function(e){
+						e.preventDefault();
+						console.log("clicked");
+						$('.tab-content').find('.active').removeClass('in active');
+						for(item in data.Pages){
+							if("#tab-"+data.Pages[item].id == $(this).attr('href')){
+								console.log(data.Pages[item].url);
+								$.get('insights/'+data.Pages[item].url, function(content){
+									$('.tab-content').html("<div id='"+data.Pages[item].id+"' class='tab-pane fade in active'>"+content+"</div>");
+								});
+								break;
+							}
+						}
+					});
+
+					$('.tab-content').on('swipeleft', function(e){
+						e.preventDefault();
+						console.log("swipeleft");
+						var id = $('.tab-content').find('.active').attr('id');
+						for(i=0; i<insights.length; i++){
+							if(insights[i] == id){
+								if(i != insights.length-1){
+									for(item in data.Pages){
+										if(data.Pages[item].id == insights[i+1]){
+											$('#mainTabs').find('.active').removeClass('active');
+											$('#'+data.Pages[item].id).addClass('active');
+											$.get('insights/'+data.Pages[item].url, function(content){
+												console.log(data.Pages[item]);
+												$('.tab-content').html("<div id='"+data.Pages[item].id+"' class='tab-pane fade in active'>"+content+"</div>");
+											});
+											break;
+										}
+									}
+								}
+							}
+						}
+					});
+
+					$('.tab-content').on('swiperight', function(e){
+						e.preventDefault();
+						console.log("swiperight");
+						var id = $('.tab-content').find('.active').attr('id');
+						for(i=0; i<insights.length; i++){
+							if(insights[i] == id){
+								if(i != 0){
+									for(item in data.Pages){
+										if(data.Pages[item].id == insights[i-1]){
+											$('#mainTabs').find('.active').removeClass('active');
+											$('#'+data.Pages[item].id).addClass('active');
+
+											$.get('insights/'+data.Pages[item].url, function(content){
+												$('.tab-content').html("<div id='"+data.Pages[item].id+"' class='tab-pane fade in active'>"+content+"</div>");
+											});
+											break;
+										}
+									}
+								}
+							}
+						}
+					});
+
+					$("#my-als-list").als({
+						visible_items: 7,
+						// circular:'yes'
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row-fluid" id="content">
+				<div class="navbar" style="padding-top:20px">
+					<div class="navbar-inner">
+						<div class="container">
+							
+							<div class="span2">
+								<button onclick="location.href='Book.html';" class="win-command" rel="tooltip" style="font-size:14px; padding-top:35px; color:#00aedb";>
+									<span style="font-size:65px; margin-right:51px;" class="icon-book"></span>
+									<span class="win-label" style="color:#00aedb; margin-top:35px;">Book of Insights</span>
+								</button>
+							</div>
+							<div class="span10" style="margin-left:0">
+								<div class="als-container row" id="my-als-list">
+ <div class="col-md-1 als-prev"><img src="images/prev.png" alt="prev" title="prev" style="margin-left:-20px; display:block;"/></div>
+ <div class="col-md-10 als-viewport tab-menu" style="width:100%; margin-left:50px; margin-right:50px;">
+ </div>
+ <div class="col-md-1 als-next glyphicon"><img src="images/next.png" alt="next" title="next" style="display:block; margin-left:50px;"/></div> <!-- "next" button -->
+</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="pointerContainer" class="container" style="height:7px; background-color:#24A0DA"></div>
+				</div>
+				<div class="tab-content col-md-12"></div>
+				
+			</div>
+		</div>
+	</body>
+	<script src="js/bootstrap.min.js"></script>
+</html>

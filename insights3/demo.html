@@ -1,0 +1,61 @@
+
+		<div class="list-group col-md-3" id="namesNav"></div>
+		<div class="col-md-6">
+			<div class="container" id="details">
+				<div id="mainDetails">
+					<div class="col-md-3" id="profilePicture"></div>
+					<div class="jobDetails col-md-6">
+						<div class="container">
+							<h2 id="name"></h2>
+							<h3 id="designation"></h3><br>
+							<table class="table">
+								<tr>
+									<td >Associate Id:</td>
+									<td id="associateId"></td>
+								</tr>
+								<tr>
+									<td>Join Date:</td> 
+									<td id="joinDate"></td>
+								</tr>
+								<tr>
+									<td>Reports To:</td>
+									<td id="reportsTo"></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<script type="text/javascript">
+$(function(){
+	$.getJSON('./data/workers.json', function(data){
+		console.log(data.workers[3].person.legalName.formattedName);
+		var listNames='';
+		for(item in data.workers){
+			listNames+='<a href="#" id="'+data.workers[item].associateOID+'" class="list-group-item">'+data.workers[item].person.legalName.formattedName+'</a>';
+		}
+		$('.list-group').html(listNames);
+		$('#details').hide();
+
+		$('.list-group').on('click', 'a', function(e){
+			e.preventDefault();
+			$('#details').show();
+			$('.list-group').find('.active').removeClass('active');
+			$(this).addClass('active');
+			var id = $(this).attr('id');
+			for(item in data.workers){
+				if(id == data.workers[item].associateOID){
+					console.log(data.workers[item].photos[0].links[0].href);
+					$('#profilePicture').html('<img src="'+data.workers[item].photos[0].links[0].href+'" style="height:250px; width:220px">');
+					$('#name').html(data.workers[item].person.legalName.formattedName);
+					$('#designation').html(data.workers[item].workAssignments[0].jobTitle);
+					$('#associateId').html(data.workers[item].associateOID);
+					$('#joinDate').html(data.workers[item].workAssignments[0].actualStartDate);
+					$('#reportsTo').html(data.workers[item].workAssignments[0].reportsTo[0].reportsToWorkerName.formattedName);
+				}
+			}
+		});
+	});
+});
+</script>

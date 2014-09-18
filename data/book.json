@@ -1,0 +1,174 @@
+{
+	"Pages" :
+	[
+		{
+			"id" : 1,
+			"img" : "./assets/img/payment.jpg",
+			"color" : "",
+			"size" : "app",
+			"tile-properties" : "tile square image ",
+			"text-properties" : "",
+			"title" : "My Operations",
+			"content" : "Payment for the Transation!",
+			"url" : "third.html",
+			"icon" : "icon-bars",
+			"page_no" : 1
+		},
+		{
+			"id" : 2,
+			"img" : "./assets/img/planning.jpg",
+			"color" : "",
+			"size" : "app",
+			"tile-properties" : "tile square image ",
+			"text-properties" : "",
+			"title" : "Planning",
+			"content" : "This Insight tells about your WorkForce, monthly comparisons of your WorkForce. In addition to that it will show you workforce growth in different departments and It tell about where should you recruite people in future.",
+			"url" : "planning.html",
+			"page_no" : 2
+		},
+		{
+			"id" : 3,
+			"img" : "./assets/img/target1.jpg",
+			"color" : "",
+			"size" : "app",
+			"tile-properties" : "tile square image ",
+			"text-properties" : "",
+			"title" : "Benchmarks",
+			"content" : "What are the targets, how much you achieved !",
+			"url" : "fourth.html",
+			"page_no" : 3
+		},
+		{
+			"id" : 4,
+			"img" : "./assets/img/netincome.png",
+			"color" : "",
+			"size" : "app",
+			"tile-properties" : "tile square image ",
+			"text-properties" : "",
+			"title" : "Compliance",
+			"content" : "Net Income is referred to as the bottom line, net profit, or net earnings is a measure of the profitability of a venture after accounting for all costs.",
+			"url" : "second.html",
+			"page_no" : 4
+		},
+		{
+			"id" : 5,
+			"img" : "./assets/img/expenses.png",
+			"color" : "",
+			"size" : "app",
+			"tile-properties" : "tile square image ",
+			"text-properties" : "",
+			"title" : "Expenses YOY",
+			"content" : "Expenses Year Over Year (YOY) measures the total cost or outflow of money each month and compares these expenses to the months of the prior year.",
+			"url" : "#",
+			"page_no" : 5
+		},
+		{
+			"id" : 6,
+			"img" : "./assets/img/statistics.jpg",
+			"color" : "",
+			"size" : "app",
+			"tile-properties" : "tile square image ",
+			"text-properties" : "",
+			"title" : "Statistics",
+			"content" : "Expenses Year Over Year (YOY) measures the total cost or outflow of money each month and compares these expenses to the months of the prior year.",
+			"url" : "#",
+			"page_no" : 6
+		},
+		{
+			"id" : 7,
+			"img" : "./assets/img/statistics.jpg",
+			"color" : "",
+			"size" : "app",
+			"tile-properties" : "tile square image ",
+			"text-properties" : "",
+			"title" : "Statistics",
+			"content" : "Expenses Year Over Year (YOY) measures the total cost or outflow of money each month and compares these expenses to the months of the prior year.",
+			"url" : "#",
+			"page_no" : 6
+		},
+		{
+			"id" : 8,
+			"img" : "./assets/img/statistics.jpg",
+			"color" : "",
+			"size" : "app",
+			"tile-properties" : "tile square image ",
+			"text-properties" : "",
+			"title" : "Statistics",
+			"content" : "Expenses Year Over Year (YOY) measures the total cost or outflow of money each month and compares these expenses to the months of the prior year.",
+			"url" : "#",
+			"page_no" : 6
+		},
+		{
+			"id" : 9,
+			"img" : "./assets/img/statistics.jpg",
+			"color" : "",
+			"size" : "app",
+			"tile-properties" : "tile square image ",
+			"text-properties" : "",
+			"title" : "Statistics",
+			"content" : "Expenses Year Over Year (YOY) measures the total cost or outflow of money each month and compares these expenses to the months of the prior year.",
+			"url" : "#",
+			"page_no" : 6
+		},
+		{
+			"id" : 10,
+			"img" : "./assets/img/statistics.jpg",
+			"color" : "",
+			"size" : "app",
+			"tile-properties" : "tile square image ",
+			"text-properties" : "",
+			"title" : "Statistics",
+			"content" : "Expenses Year Over Year (YOY) measures the total cost or outflow of money each month and compares these expenses to the months of the prior year.",
+			"url" : "#",
+			"page_no" : 6
+		},
+		{
+			"id" : 11,
+			"img" : "./assets/img/statistics.jpg",
+			"color" : "",
+			"size" : "app",
+			"tile-properties" : "tile square image ",
+			"text-properties" : "",
+			"title" : "Statistics",
+			"content" : "Expenses Year Over Year (YOY) measures the total cost or outflow of money each month and compares these expenses to the months of the prior year.",
+			"url" : "#",
+			"page_no" : 6
+		},
+		{
+			"id" : 12,
+			"img" : "./assets/img/statistics.jpg",
+			"color" : "",
+			"size" : "app",
+			"tile-properties" : "tile square image ",
+			"text-properties" : "",
+			"title" : "Statistics",
+			"content" : "Expenses Year Over Year (YOY) measures the total cost or outflow of money each month and compares these expenses to the months of the prior year.",
+			"url" : "#",
+			"page_no" : 6
+		},
+		{
+			"id" : 13,
+			"img" : "./assets/img/statistics.jpg",
+			"color" : "",
+			"size" : "app",
+			"tile-properties" : "tile square image ",
+			"text-properties" : "",
+			"title" : "Statistics",
+			"content" : "Expenses Year Over Year (YOY) measures the total cost or outflow of money each month and compares these expenses to the months of the prior year.",
+			"url" : "#",
+			"page_no" : 6
+		},
+		{
+			"id" : 14,
+			"img" : "./assets/img/statistics.jpg",
+			"color" : "",
+			"size" : "app",
+			"tile-properties" : "tile square image ",
+			"text-properties" : "",
+			"title" : "Statistics",
+			"content" : "Expenses Year Over Year (YOY) measures the total cost or outflow of money each month and compares these expenses to the months of the prior year.",
+			"url" : "#",
+			"page_no" : 6
+		}
+	]
+}

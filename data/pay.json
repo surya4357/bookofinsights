@@ -1,0 +1,61 @@
+{
+   "retirementPlanIndicator": true,
+   "payStatements": [ 
+    {
+       "payDate": "2010-05-28",
+       "netPayAmount": 
+      {
+         "amountValue": 330.21,
+         "currencyCode": "USD" 
+      },
+       "grossPayAmount": 
+      {
+         "amountValue": 693.72,
+         "currencyCode": "USD" 
+      },
+       "totalHours": 80,
+       "payDetailUri": 
+      {
+         "href": "/v1_0/O/A/payStatement/162065010443626080000404081795" 
+      } 
+    },
+     
+    {
+       "payDate": "2010-05-28",
+       "netPayAmount": 
+      {
+         "amountValue": 330.22,
+         "currencyCode": "USD" 
+      },
+       "grossPayAmount": 
+      {
+         "amountValue": 693.72,
+         "currencyCode": "USD" 
+      },
+       "totalHours": 80,
+       "payDetailUri": 
+      {
+         "href": "/v1_0/O/A/payStatement/162065010443626080000404081795" 
+      } 
+    },
+     
+    {
+       "payDate": "2010-05-28",
+       "netPayAmount": 
+      {
+         "amountValue": 330.23,
+         "currencyCode": "USD" 
+      },
+       "grossPayAmount": 
+      {
+         "amountValue": 693.72,
+         "currencyCode": "USD" 
+      },
+       "totalHours": 80,
+       "payDetailUri": 
+      {
+         "href": "/v1_0/O/A/payStatement/162065010443626080000404081795" 
+      } 
+    } 
+  ] 
+}

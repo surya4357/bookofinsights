@@ -1,0 +1,179 @@
+<script>
+$(function () {
+
+    setTimeout(runCompliance, 500);
+});
+
+function runCompliance(){
+
+	var compliance_by_type = [];
+    var compliance_by_month = {"by_month":[{}]};
+    var m;
+
+    $.getJSON('./data/benefits.json', function(benefits){
+        var benefits_status = benefits.participantBenefitElections.currentElection.elections; 
+
+        for(item in benefits_status){
+            m = months[parseInt(benefits_status[item].startDate.split("-")[1])];
+
+            if(compliance_by_month.by_month[0][m])
+                compliance_by_month.by_month[0][m]++;
+            else{
+                compliance_by_month.by_month[0][m] = 1;
+
+            }
+
+            compliance_by_type.push({
+                "title" : benefits_status[item].typeCodeName,
+                "value" : benefits_status[item].optedNumber
+            });
+        }
+        console.log(compliance_by_month.by_month);
+        console.log(compliance_by_type);
+        
+
+        var chart = AmCharts.makeChart("chartdiv_bar", {
+            "type": "serial",
+            "rotate": true,
+            "theme": "none",
+            "autoMargins": false,
+            "marginTop": 30,
+            "marginLeft": 80,
+            "marginBottom": 30,
+            "marginRight": 50,
+            "startEffect": "easeOutSine",
+            "dataProvider": [{
+                "category": "June",
+                "excelent": 2,
+                "good": 2,
+                "average": 2,
+                "poor": 2,
+                "bad": 2,
+                "full": 7,
+                "bullet": 2
+            },
+            {
+                "category": "July",
+                "excelent": 2,
+                "good": 2,
+                "average": 2,
+                "poor": 2,
+                "bad": 2,
+                "full": 7,
+                "bullet": 3
+            },
+            {
+                "category": "August",
+                "excelent": 2,
+                "good": 2,
+                "average": 2,
+                "poor": 2,
+                "bad": 2,
+                "full": 7,
+                "bullet": 4
+            },
+            {
+                "category": "September",
+                "excelent": 2,
+                "good": 2,
+                "average": 2,
+                "poor": 2,
+                "bad": 2,
+                "full": 7,
+                "bullet": 6
+            }],
+            "valueAxes": [{
+                "maximum": 7,
+                "stackType": "regular",
+                "gridAlpha": 0
+            }],
+            "startDuration": 1,
+            "graphs": [{
+                "columnWidth": 0.5,
+                "lineColor": "#424242",
+                "lineThickness": 3,
+                "noStepRisers": true,
+                "stackable": false,
+                "type": "step",
+                "valueField": "limit"
+            }, {
+                "valueField": "full",
+                "showBalloon": false,
+                "type": "column",
+                "lineAlpha": 0,
+                "fillAlphas": 0.8,
+                "fillColors": ["#ee1111", "#ffc40d", "#00a300"],
+                "gradientOrientation": "horizontal",
+            }, {
+                "clustered": false,
+                "columnWidth": 0.3,
+                "fillAlphas": 1,
+                "lineColor": "#424242",
+                "stackable": false,
+                "type": "column",
+                "valueField": "bullet"
+            }],
+            "columnWidth": 1,
+            "categoryField": "category",
+            "categoryAxis": {
+                "gridAlpha": 0,
+                "position": "left"
+            }
+        });
+
+        var chart1 = AmCharts.makeChart("chartdiv_pie", {
+            "type": "pie",
+            "theme": "light",
+            "dataProvider": compliance_by_type,
+            "titleField": "title",
+            "valueField": "value",
+            "labelRadius": 1,
+            // "sequencedAnimation": false,
+            "startEffect": "easeOutSine",
+            "radius": "30%",
+            "innerRadius": "60%",
+            "labelText": "[[title]]"
+        });
+
+        setTimeout(function(){$("a[title='JavaScript charts']").css('display','none');}, 50);    
+    });
+        
+}
+</script>
+<style type="text/css">
+    #chartdiv_bar {
+        width       : 600px;
+        height      : 400px;
+        font-size   : 11px;
+    }  
+
+    #chartdiv_pie {
+        width       : 400px;
+        height      : 400px;
+        font-size   : 11px;
+        margin-left : 20px; 
+    }            
+</style>
+
+<div class="col-md-12">
+    <div class="col-md-6 panel panel-default" style="padding:0px;">
+        <div class="panel-heading">
+            <h4 class="panel-title">Your Compliance Rating</h4>
+            <!-- <small class="pull-right">(Using AM Charts JS Library)</small> -->
+        </div>
+        <div id="chartdiv_bar" class="panel-body"></div>
+    </div>
+
+    <div class="col-md-5 panel panel-default" style="padding:0px; margin-left:50px;">
+        <div class="panel-heading">
+            <h4 class="panel-title">Benefits Enrollment</h4>
+            <!-- <small class="pull-right">(Using AM Charts JS Library)</small> -->
+        </div>
+        <div id="chartdiv_pie" class="panel-body"></div>
+    </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,305 @@
+<script type="text/javascript">
+
+	$(function(){
+		setTimeout(runDashboard, 500);
+	});
+
+	function runDashboard(){
+
+// *************************************************** Employee Recruitment ***********************************************
+		var total_last_three = workers[months[curr_month-3]]["no_of_workers"];
+		var total_last_two = workers[months[curr_month-2]]["no_of_workers"];
+		var total_last = workers[months[curr_month-1]]["no_of_workers"];
+		var total_now = workers[months[curr_month]]["no_of_workers"];
+			
+		var fromLastMonth = (total_now - total_last)/total_last * 100;
+		var fromLastTwoMonths = (total_now - total_last_two)/total_last_two * 100;
+		var fromLastThreeMonths = (total_now - total_last_three)/total_last_three * 100;
+
+		$('#totalValue').html(total_now);
+		$('#fromLastMonth').html("<span class='glyphicon glyphicon-plus-sign'></span> " +Math.round(fromLastMonth)+ "% from last month");
+		$('#fromTwoMonths').html("<span class='glyphicon glyphicon-plus-sign'></span> " +Math.round(fromLastTwoMonths)+ "% from last 2 months");
+		$('#fromThreeMonths').html("<span class='glyphicon glyphicon-plus-sign'></span> " +Math.round(fromLastThreeMonths)+ "% from last 3 months");
+
+		var by_location = workers["by_location"];
+		var html = '';
+		$.each(by_location, function(i){
+			html='<li class="list-group-item" style="border:0px;"><span class="badge" style="background-color:#00aedb;">'+by_location[i]+'</span>'+i+'</li>';
+			$('#by_location_details').append(html);
+		});
+		
+		
+
+// *************************************************** Employee Distribution Map ***********************************************
+		var map = L.map('map').setView([37.8, -96], 3.5);
+
+		L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
+			maxZoom: 3.5,
+			minZoom:3.5,
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+				'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+			id: 'examples.map-20v6611k'
+		}).addTo(map);
+
+
+		// control that shows state info on hover
+
+
+		var info = L.control();
+
+		info.onAdd = function (map) {
+			this._div = L.DomUtil.create('div', 'info');
+			this.update();
+			return this._div;
+		};
+
+		info.update = function (props) {
+			this._div.innerHTML = (props ?
+				'<b>' + props.name + '</b><br />' + props.density + ' Employees'
+				: 'Hover over a state');
+		};
+
+		info.addTo(map);
+
+
+		// get color depending on population density value
+		function getColor(d) {
+			return d >= 3 ? '#0B0B61' :
+			       d >= 2  ? '#4189B5' :
+			       d >= 1   ? '#57A8D4' :
+			                  '#A9E2F3';
+		}
+
+		function style(feature) {
+			return {
+				weight: 2,
+				opacity: 1,
+				color: 'white',
+				dashArray: '3',
+				fillOpacity: 0.7,
+				fillColor: getColor(feature.properties.density)
+			};
+		}
+
+		function highlightFeature(e) {
+			var layer = e.target;
+
+			layer.setStyle({
+				weight: 5,
+				color: '#666',
+				dashArray: '',
+				fillOpacity: 0.7
+			});
+
+			if (!L.Browser.ie && !L.Browser.opera) {
+				layer.bringToFront();
+			}
+
+			info.update(layer.feature.properties);
+		}
+
+		var geojson;
+
+		function resetHighlight(e) {
+			geojson.resetStyle(e.target);
+			info.update();
+		}
+
+		function zoomToFeature(e) {
+			map.fitBounds(e.target.getBounds());
+		}
+
+		function onEachFeature(feature, layer) {
+			layer.on({
+				mouseover: highlightFeature,
+				mouseout: resetHighlight,
+				click: zoomToFeature
+			});
+		}
+
+		geojson = L.geoJson(statesData, {
+			style: style,
+			onEachFeature: onEachFeature
+		}).addTo(map);
+
+		// map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
+
+
+		var legend = L.control({position: 'bottomright'});
+
+		legend.onAdd = function (map) {
+
+			var div = L.DomUtil.create('div', 'info legend'),
+				grades = [0,1,2],
+				labels = [],
+				from, to;
+
+			for (var i = 0; i < grades.length; i++) {
+				from = grades[i];
+				to = grades[i + 1];
+
+				labels.push(
+					'<i style="background:' + getColor(from + 1) + '"></i> ' +
+					from + (to ? '&ndash;' + to : '+'));
+			}
+
+			div.innerHTML = labels.join('<br>');
+			return div;
+		};
+
+		legend.addTo(map);
+
+		// $('.leaflet-top').css("display", "none");
+
+// *************************************************** Financial Sales ***********************************************
+	var net_income = 247850.97;
+	var net_expenses = payroll + 50000;
+	var net_profit = net_income - net_expenses;
+	var profit_percentage = net_profit/net_expenses*100;
+
+	$('#net_income').text(net_income).formatCurrency();
+	$('#net_expenses').text(net_expenses).formatCurrency();
+	$('#net_profit').text(net_profit).formatCurrency();
+	$('#profit_percentage').text(Math.round(profit_percentage));
+
+// *************************************************** Payroll *******************************************************
+	var total_employees = workers["total_workers"];
+	
+	$.getJSON('./data/payroll.json', function(payroll_data){
+		var next_payment_date, net_pay_amount, cash_balance;		
+		next_payment_date = payroll_data.payStatements[0].payDate;
+		net_pay_amount = payroll_data.payStatements[0].netPayAmount.amountValue;
+		cash_balance = net_pay_amount + 100000;
+
+		$('#total_employees').text(total_employees);
+		$('#next_payment_date').text(next_payment_date);
+		$('#net_pay_amount').text(net_pay_amount).formatCurrency();
+		$('#cash_balance').text(cash_balance).formatCurrency();
+	});
+
+// *************************************************** Time Off *******************************************************
+	// var time_off = {};
+
+	$.getJSON('./data/timeoff.json', function(timeoff_data){
+		var timeoff_balance = 0, timeoff_requests = 0;
+
+		for(item in timeoff_data.paidTimeOffDetails){
+			console.log(timeoff_data.paidTimeOffDetails[item].paidTimeOffBalances[0].totalBalance);
+			timeoff_balance += timeoff_data.paidTimeOffDetails[item].paidTimeOffBalances[0].totalBalance;
+			// time_balance += timeoff_data.paidTimeOffDetails[item].paidTimeOffBalances[0].totalBalance;
+			timeoff_requests += timeoff_data.paidTimeOffDetails[item].paidTimeOffRequest.totalRequests;
+		}
+
+		$('#timeoff_balance').text(timeoff_balance);
+		$('#timeoff_requests').text(timeoff_requests);
+	});
+
+}
+</script>
+<div class="col-md-12">
+	<div id="workForce" class="panel panel-default col-md-4" style="padding:0px;">
+		<div class="panel-heading">
+			<span class="icon icon-users"></span>
+			<h4 class="panel-title" style="margin-left:30px;">Total Employees <span class="icon icon-arrow-up-11 pull-right" style="color:#5bb75b; padding-right:25px;"></span></h4>
+			
+		</div>
+		<div class="panel-body" style="background-color: #00aedb; color:#fff; text-align:center;">
+			<br>
+			<h1 id="totalValue" style="font-size:80px; margin-bottom:20px"></h1><br>
+			<ul align="left" style="list-style:none; color:#fff; margin-left:23%; font-size:15px;padding:0px;">
+				<li style="padding:3px; margin-bottom:10px" id="fromLastMonth"></li>
+				<li style="padding:3px; margin-bottom:10px" id="fromTwoMonths"></li>
+				<li style="padding:3px; margin-bottom:10px" id="fromThreeMonths"></li>
+			</ul><br>
+		</div>
+	</div>
+
+<!-- <div class="col-md-1"></div> -->
+
+<div id="workforce_byLocation" class="panel panel-default col-md-7" style="padding:0px; margin-left:90px;">
+	<div class="panel-heading">
+		<span class="icon icon-location-2"></span>
+		<h4 class="panel-title" style="margin-left:30px;">Employees by Location <span style="color:#da4f49; padding-right:25px;"></span></h4>
+		<!-- <small class="pull-right">(Using Leaflet JS Library)</small> -->
+	</div>
+	<!-- <div class="panel-heading">
+		<h4 class="panel-title">Employees by Location</h4>
+	</div>
+	<div class="panel-body" style="padding:0px">
+		<ul id="by_location_details" class="list-group" style="padding:0px; margin:0px;">
+
+		</ul>
+	</div> -->
+	<!-- <div class="panel-body" style="background-color: #00aedb; color:#fff; text-align:center;"> -->
+		<div id="map" style="background-color:#fff;"></div>
+	<!-- </div> -->
+</div>
+</div>
+<div class="col-md-12" style="margin-top:35px;">
+	<div id="financialStatus" class="panel panel-default col-md-4" style="padding:0px">
+		<div class="panel-heading">
+			<span class="icon icon-coin"></span>
+			<h4 class="panel-title" style="margin-left:30px;">Financial Status <small>(Last Month)</small><span class="icon icon-arrow-up-11 pull-right" style="color:#5bb75b; padding-right:25px;"></span></h4>
+		</div>
+		<div class="panel-body" style="padding:0px;">
+			<ul id="financial_details" class="list-group" style="padding:0px; margin:15px;">
+				<li class="list-group-item" style="border:0px;"><span id="net_income" class="badge" style="background-color:#000; padding:6px;"></span><span style="color:green;" class="glyphicon glyphicon-circle-arrow-up"></span> Net Income</li>
+				
+				<li class="list-group-item" style="border:0px;"><span id="net_expenses" class="badge" style="background-color:#000;padding:6px;"></span><span style="color:red;" class="glyphicon glyphicon-circle-arrow-down"></span> Net Expenses</li>
+				
+				<li id="profit" class="list-group-item" style="border:0px;"><span id="net_profit" class="badge" style="background-color:#000;padding:6px;"></span><span style="color:green;" class="glyphicon glyphicon-circle-arrow-up"></span> Net Profit</li>
+				
+				<li id="profitPercentage" class="list-group-item" style="border:0px;"><span id="profit_percentage" class="badge" style="background-color:#000;padding:6px;"></span><span style="color:green;" class="glyphicon glyphicon-circle-arrow-up"></span> Profit (%)</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="payroll" class="panel panel-default col-md-4" style="padding:0px; margin-left: 50px;">
+		<div class="panel-heading">
+			<span class="icon icon-credit"></span>
+			<h4 class="panel-title" style="margin-left:30px;">Payroll <small>(This Month)</small><span class="icon icon-arrow-up-11 pull-right" style="color:#5bb75b; padding-right:25px;"></span></h4>
+		</div>
+		<div class="panel-body" style="padding:0px">
+			<ul id="payroll_details" class="list-group" style="padding:0px; margin:15px;">
+				<li class="list-group-item" style="border:0px;"><span id="total_employees" class="badge" style="background-color:#000; padding:6px;"></span><span class="glyphicon glyphicon-user"></span> Number of Employees</li>
+
+				<li class="list-group-item" style="border:0px;"><span id="next_payment_date" class="badge" style="background-color:#000;padding:6px;"></span><span class="glyphicon glyphicon-calendar"></span> Your Next Payment Date</li>
+				
+				<li class="list-group-item" style="border:0px;"><span id="net_pay_amount" class="badge" style="background-color:#000;padding:6px;"></span><span style="font-size:17px; margin-right:5px;" class="icon icon-paypal"></span>Net Pay Amount</li>
+				
+				<li class="list-group-item" style="border:0px;"><span id="cash_balance" class="badge" style="background-color:#000;padding:6px;"></span><span class="glyphicon glyphicon-usd"></span> Cash Balance</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- <div id="health" class="col-md-3" style="margin-left:10px;">
+		<div class="circle-text"><div>Healthy</div></div>
+	</div> -->
+	<div id="payroll" class="panel panel-default col-md-3" style="padding:0px; margin-left: 40px;">
+		<div class="panel-heading">
+			<span class="icon icon-clock-3"></span>
+			<h4 class="panel-title" style="margin-left:30px;">Time<span class="icon icon-arrow-up-11 pull-right" style="color:#5bb75b; padding-right:25px;"></span></h4>
+		</div>
+		<div class="panel-body" style="padding:0px">
+			<ul id="payroll_details" class="list-group" style="padding:0px; margin:15px;">
+				<li class="list-group-item" style="border:0px;"><span id="timeoff_balance" class="badge" style="background-color:#000; padding:6px;"></span>Paid Time Off Balances</li>
+
+				<li class="list-group-item" style="border:0px;"><span id="timeoff_requests" class="badge" style="background-color:#000;padding:6px;"></span>Paid Time Off Requests</li>
+				
+				<li class="list-group-item" style="border:0px;"><span id="next_payment_date" class="badge" style="background-color:#000;padding:6px;"></span></li>
+
+				<li class="list-group-item" style="border:0px;"><span id="next_payment_date" class="badge" style="background-color:#000;padding:6px;"></span></li>
+
+				<li class="list-group-item" style="border:0px;"><span id="next_payment_date" class="badge" style="background-color:#000;padding:6px;"></span></li>
+
+				<li class="list-group-item" style="border:0px;"><span id="next_payment_date" class="badge" style="background-color:#000;padding:6px;"></span></li>
+
+				<!-- <li class="list-group-item" style="border:0px;"><span id="net_pay_amount" class="badge" style="background-color:#000;padding:6px;"></span>Net Pay Amount</li>
+				
+				<li class="list-group-item" style="border:0px;"><span id="cash_balance" class="badge" style="background-color:#000;padding:6px;"></span>Cash Balance</li> -->
+			</ul>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,29 @@
+{
+	"pages":[
+		{
+			"item_id" : "firstItem",
+			"name" : "First",
+			"url" : "first"
+		},
+		{
+			"item_id" : "secondItem",
+			"name" : "Second",
+			"url" : "second"
+		},
+		{
+			"item_id" : "thirdItem",
+			"name" : "Third",
+			"url" : "third"
+		},
+		{
+			"item_id" : "fourthItem",
+			"name" : "Fourth",
+			"url" : "fourth"
+		},
+		{
+			"item_id" : "demoItem",
+			"name" : "Workers",
+			"url" : "demo"
+		}
+	]
+}

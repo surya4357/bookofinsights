@@ -1,0 +1,3085 @@
+{
+  "paidTimeOffDetails": [
+    {
+      "associateOID": "H5O73G9Z62SL2NFA",
+      "paidTimeOffBalances": [
+        {
+          "totalBalance": 5,
+          "positionRef": {
+            "positionID": {
+              "id": "11000199-1",
+              "schemeName": "PFID",
+              "schemeAgencyName": "ADP Registry"
+            },
+            "title": "North-East Region Manager"
+          },
+          "asOfDate": "2013-03-15",
+          "paidTimeOffPolicyBalances": [
+            {
+              "paidTimeOffPolicy": {
+                "code": "VD",
+                "labelName": "Vacation"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "available",
+                    "labelName": "Available"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 20,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                }
+              ]
+            },
+            {
+              "paidTimeOffPolicy": {
+                "code": "PD",
+                "labelName": "Personal"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "available",
+                    "labelName": "Available"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 2,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                },
+                {
+                  "balanceType": {
+                    "code": "taken",
+                    "labelName": "Used"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 2,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  },
+                  "paidTimeOffEntries": [
+                    {
+                      "paidTimeOffID": "125",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-02-13",
+                        "endDateTime": "2013-02-13"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/125"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r"
+                        ]
+                      }
+                    },
+                    {
+                      "paidTimeOffID": "126",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-03-14",
+                        "endDateTime": "2013-03-14"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/126"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "balanceType": {
+                    "code": "initialize",
+                    "labelName": "Approved"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 1,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  },
+                  "paidTimeOffEntries": [
+                    {
+                      "paidTimeOffID": "127",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-03-29",
+                        "endDateTime": "2013-03-29"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/127"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r",
+                          "u",
+                          "d"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "paidTimeOffPolicy": {
+                "code": "S",
+                "labelName": "Sick"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "taken",
+                    "labelName": "Taken"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 5,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "paidTimeOffRequest": {
+        "totalRequests": 2,
+        "positionRef": {
+          "positionID": {
+            "id": "11000199-1",
+            "schemeName": "PFID",
+            "schemeAgencyName": "ADP Registry"
+          },
+          "title": "North-East Region Manager"
+        },
+        "requestID": "127",
+        "entryDateTime": "2013-03-13",
+        "requestStatus": {
+          "code": "approved",
+          "labelName": "Approved"
+        },
+        "requestorComment": {
+          "entryDateTime": "2013-03-13",
+          "commentTxt": "Personal Matter"
+        },
+        "comments": [
+          {
+            "entryDateTime": "2013-03-18",
+            "commentTxt": "No problem Anthony!",
+            "userName": "Corey Hillard"
+          }
+        ],
+        "totalQuantity": {
+          "valueNumber": 3,
+          "unitTimeCode": "day",
+          "labelName": "day"
+        },
+        "meta": {
+          "metadataEntitlementCodes": [
+            "r"
+          ],
+          "multiPeriodRequestIndicator": true
+        },
+        "paidTimeOffEntries": [
+          {
+            "paidTimeOffID": "127",
+            "paidTimeOffPolicy": {
+              "code": "PD",
+              "labelName": "Personal"
+            },
+            "earningType": {
+              "code": "p",
+              "labelName": "Personal"
+            },
+            "timePeriod": {
+              "startDateTime": "2013-03-29",
+              "endDateTime": "2013-03-29"
+            },
+            "totalQuantity": {
+              "valueNumber": 1,
+              "unitTimeCode": "day",
+              "labelName": "day"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "associateOID": "H5O73G9Z62SL2NFB",
+      "paidTimeOffBalances": [
+        {
+          "totalBalance": 5,
+          "positionRef": {
+            "positionID": {
+              "id": "11000199-1",
+              "schemeName": "PFID",
+              "schemeAgencyName": "ADP Registry"
+            },
+            "title": "North-East Region Manager"
+          },
+          "asOfDate": "2013-03-15",
+          "paidTimeOffPolicyBalances": [
+            {
+              "paidTimeOffPolicy": {
+                "code": "VD",
+                "labelName": "Vacation"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "available",
+                    "labelName": "Available"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 20,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                }
+              ]
+            },
+            {
+              "paidTimeOffPolicy": {
+                "code": "PD",
+                "labelName": "Personal"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "available",
+                    "labelName": "Available"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 2,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                },
+                {
+                  "balanceType": {
+                    "code": "taken",
+                    "labelName": "Used"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 2,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  },
+                  "paidTimeOffEntries": [
+                    {
+                      "paidTimeOffID": "125",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-02-13",
+                        "endDateTime": "2013-02-13"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/125"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r"
+                        ]
+                      }
+                    },
+                    {
+                      "paidTimeOffID": "126",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-03-14",
+                        "endDateTime": "2013-03-14"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/126"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "balanceType": {
+                    "code": "initialize",
+                    "labelName": "Approved"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 1,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  },
+                  "paidTimeOffEntries": [
+                    {
+                      "paidTimeOffID": "127",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-03-29",
+                        "endDateTime": "2013-03-29"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/127"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r",
+                          "u",
+                          "d"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "paidTimeOffPolicy": {
+                "code": "S",
+                "labelName": "Sick"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "taken",
+                    "labelName": "Taken"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 5,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "paidTimeOffRequest": {
+        "totalRequests": 1,
+        "positionRef": {
+          "positionID": {
+            "id": "11000199-1",
+            "schemeName": "PFID",
+            "schemeAgencyName": "ADP Registry"
+          },
+          "title": "North-East Region Manager"
+        },
+        "requestID": "127",
+        "entryDateTime": "2013-03-13",
+        "requestStatus": {
+          "code": "approved",
+          "labelName": "Approved"
+        },
+        "requestorComment": {
+          "entryDateTime": "2013-03-13",
+          "commentTxt": "Personal Matter"
+        },
+        "comments": [
+          {
+            "entryDateTime": "2013-03-18",
+            "commentTxt": "No problem Anthony!",
+            "userName": "Corey Hillard"
+          }
+        ],
+        "totalQuantity": {
+          "valueNumber": 3,
+          "unitTimeCode": "day",
+          "labelName": "day"
+        },
+        "meta": {
+          "metadataEntitlementCodes": [
+            "r"
+          ],
+          "multiPeriodRequestIndicator": true
+        },
+        "paidTimeOffEntries": [
+          {
+            "paidTimeOffID": "127",
+            "paidTimeOffPolicy": {
+              "code": "PD",
+              "labelName": "Personal"
+            },
+            "earningType": {
+              "code": "p",
+              "labelName": "Personal"
+            },
+            "timePeriod": {
+              "startDateTime": "2013-03-29",
+              "endDateTime": "2013-03-29"
+            },
+            "totalQuantity": {
+              "valueNumber": 1,
+              "unitTimeCode": "day",
+              "labelName": "day"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "associateOID": "H5O73G9Z62SL2NFC",
+      "paidTimeOffBalances": [
+        {
+          "totalBalance": 5,
+          "positionRef": {
+            "positionID": {
+              "id": "11000199-1",
+              "schemeName": "PFID",
+              "schemeAgencyName": "ADP Registry"
+            },
+            "title": "North-East Region Manager"
+          },
+          "asOfDate": "2013-03-15",
+          "paidTimeOffPolicyBalances": [
+            {
+              "paidTimeOffPolicy": {
+                "code": "VD",
+                "labelName": "Vacation"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "available",
+                    "labelName": "Available"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 20,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                }
+              ]
+            },
+            {
+              "paidTimeOffPolicy": {
+                "code": "PD",
+                "labelName": "Personal"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "available",
+                    "labelName": "Available"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 2,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                },
+                {
+                  "balanceType": {
+                    "code": "taken",
+                    "labelName": "Used"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 2,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  },
+                  "paidTimeOffEntries": [
+                    {
+                      "paidTimeOffID": "125",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-02-13",
+                        "endDateTime": "2013-02-13"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/125"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r"
+                        ]
+                      }
+                    },
+                    {
+                      "paidTimeOffID": "126",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-03-14",
+                        "endDateTime": "2013-03-14"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/126"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "balanceType": {
+                    "code": "initialize",
+                    "labelName": "Approved"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 1,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  },
+                  "paidTimeOffEntries": [
+                    {
+                      "paidTimeOffID": "127",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-03-29",
+                        "endDateTime": "2013-03-29"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/127"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r",
+                          "u",
+                          "d"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "paidTimeOffPolicy": {
+                "code": "S",
+                "labelName": "Sick"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "taken",
+                    "labelName": "Taken"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 5,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "paidTimeOffRequest": {
+        "totalRequests": 3,
+        "positionRef": {
+          "positionID": {
+            "id": "11000199-1",
+            "schemeName": "PFID",
+            "schemeAgencyName": "ADP Registry"
+          },
+          "title": "North-East Region Manager"
+        },
+        "requestID": "127",
+        "entryDateTime": "2013-03-13",
+        "requestStatus": {
+          "code": "approved",
+          "labelName": "Approved"
+        },
+        "requestorComment": {
+          "entryDateTime": "2013-03-13",
+          "commentTxt": "Personal Matter"
+        },
+        "comments": [
+          {
+            "entryDateTime": "2013-03-18",
+            "commentTxt": "No problem Anthony!",
+            "userName": "Corey Hillard"
+          }
+        ],
+        "totalQuantity": {
+          "valueNumber": 3,
+          "unitTimeCode": "day",
+          "labelName": "day"
+        },
+        "meta": {
+          "metadataEntitlementCodes": [
+            "r"
+          ],
+          "multiPeriodRequestIndicator": true
+        },
+        "paidTimeOffEntries": [
+          {
+            "paidTimeOffID": "127",
+            "paidTimeOffPolicy": {
+              "code": "PD",
+              "labelName": "Personal"
+            },
+            "earningType": {
+              "code": "p",
+              "labelName": "Personal"
+            },
+            "timePeriod": {
+              "startDateTime": "2013-03-29",
+              "endDateTime": "2013-03-29"
+            },
+            "totalQuantity": {
+              "valueNumber": 1,
+              "unitTimeCode": "day",
+              "labelName": "day"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "associateOID": "H5O73G9Z62SL2NFD",
+      "paidTimeOffBalances": [
+        {
+          "totalBalance": 5,
+          "positionRef": {
+            "positionID": {
+              "id": "11000199-1",
+              "schemeName": "PFID",
+              "schemeAgencyName": "ADP Registry"
+            },
+            "title": "North-East Region Manager"
+          },
+          "asOfDate": "2013-03-15",
+          "paidTimeOffPolicyBalances": [
+            {
+              "paidTimeOffPolicy": {
+                "code": "VD",
+                "labelName": "Vacation"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "available",
+                    "labelName": "Available"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 20,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                }
+              ]
+            },
+            {
+              "paidTimeOffPolicy": {
+                "code": "PD",
+                "labelName": "Personal"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "available",
+                    "labelName": "Available"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 2,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                },
+                {
+                  "balanceType": {
+                    "code": "taken",
+                    "labelName": "Used"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 2,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  },
+                  "paidTimeOffEntries": [
+                    {
+                      "paidTimeOffID": "125",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-02-13",
+                        "endDateTime": "2013-02-13"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/125"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r"
+                        ]
+                      }
+                    },
+                    {
+                      "paidTimeOffID": "126",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-03-14",
+                        "endDateTime": "2013-03-14"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/126"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "balanceType": {
+                    "code": "initialize",
+                    "labelName": "Approved"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 1,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  },
+                  "paidTimeOffEntries": [
+                    {
+                      "paidTimeOffID": "127",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-03-29",
+                        "endDateTime": "2013-03-29"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/127"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r",
+                          "u",
+                          "d"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "paidTimeOffPolicy": {
+                "code": "S",
+                "labelName": "Sick"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "taken",
+                    "labelName": "Taken"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 5,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "paidTimeOffRequest": {
+        "totalRequests": 1,
+        "positionRef": {
+          "positionID": {
+            "id": "11000199-1",
+            "schemeName": "PFID",
+            "schemeAgencyName": "ADP Registry"
+          },
+          "title": "North-East Region Manager"
+        },
+        "requestID": "127",
+        "entryDateTime": "2013-03-13",
+        "requestStatus": {
+          "code": "approved",
+          "labelName": "Approved"
+        },
+        "requestorComment": {
+          "entryDateTime": "2013-03-13",
+          "commentTxt": "Personal Matter"
+        },
+        "comments": [
+          {
+            "entryDateTime": "2013-03-18",
+            "commentTxt": "No problem Anthony!",
+            "userName": "Corey Hillard"
+          }
+        ],
+        "totalQuantity": {
+          "valueNumber": 3,
+          "unitTimeCode": "day",
+          "labelName": "day"
+        },
+        "meta": {
+          "metadataEntitlementCodes": [
+            "r"
+          ],
+          "multiPeriodRequestIndicator": true
+        },
+        "paidTimeOffEntries": [
+          {
+            "paidTimeOffID": "127",
+            "paidTimeOffPolicy": {
+              "code": "PD",
+              "labelName": "Personal"
+            },
+            "earningType": {
+              "code": "p",
+              "labelName": "Personal"
+            },
+            "timePeriod": {
+              "startDateTime": "2013-03-29",
+              "endDateTime": "2013-03-29"
+            },
+            "totalQuantity": {
+              "valueNumber": 1,
+              "unitTimeCode": "day",
+              "labelName": "day"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "associateOID": "H5O73G9Z62SL2NFE",
+      "paidTimeOffBalances": [
+        {
+          "totalBalance": 5,
+          "positionRef": {
+            "positionID": {
+              "id": "11000199-1",
+              "schemeName": "PFID",
+              "schemeAgencyName": "ADP Registry"
+            },
+            "title": "North-East Region Manager"
+          },
+          "asOfDate": "2013-03-15",
+          "paidTimeOffPolicyBalances": [
+            {
+              "paidTimeOffPolicy": {
+                "code": "VD",
+                "labelName": "Vacation"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "available",
+                    "labelName": "Available"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 20,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                }
+              ]
+            },
+            {
+              "paidTimeOffPolicy": {
+                "code": "PD",
+                "labelName": "Personal"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "available",
+                    "labelName": "Available"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 2,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                },
+                {
+                  "balanceType": {
+                    "code": "taken",
+                    "labelName": "Used"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 2,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  },
+                  "paidTimeOffEntries": [
+                    {
+                      "paidTimeOffID": "125",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-02-13",
+                        "endDateTime": "2013-02-13"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/125"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r"
+                        ]
+                      }
+                    },
+                    {
+                      "paidTimeOffID": "126",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-03-14",
+                        "endDateTime": "2013-03-14"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/126"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "balanceType": {
+                    "code": "initialize",
+                    "labelName": "Approved"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 1,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  },
+                  "paidTimeOffEntries": [
+                    {
+                      "paidTimeOffID": "127",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-03-29",
+                        "endDateTime": "2013-03-29"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/127"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r",
+                          "u",
+                          "d"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "paidTimeOffPolicy": {
+                "code": "S",
+                "labelName": "Sick"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "taken",
+                    "labelName": "Taken"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 5,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "paidTimeOffRequest": {
+        "totalRequests": 1,
+        "positionRef": {
+          "positionID": {
+            "id": "11000199-1",
+            "schemeName": "PFID",
+            "schemeAgencyName": "ADP Registry"
+          },
+          "title": "North-East Region Manager"
+        },
+        "requestID": "127",
+        "entryDateTime": "2013-03-13",
+        "requestStatus": {
+          "code": "approved",
+          "labelName": "Approved"
+        },
+        "requestorComment": {
+          "entryDateTime": "2013-03-13",
+          "commentTxt": "Personal Matter"
+        },
+        "comments": [
+          {
+            "entryDateTime": "2013-03-18",
+            "commentTxt": "No problem Anthony!",
+            "userName": "Corey Hillard"
+          }
+        ],
+        "totalQuantity": {
+          "valueNumber": 3,
+          "unitTimeCode": "day",
+          "labelName": "day"
+        },
+        "meta": {
+          "metadataEntitlementCodes": [
+            "r"
+          ],
+          "multiPeriodRequestIndicator": true
+        },
+        "paidTimeOffEntries": [
+          {
+            "paidTimeOffID": "127",
+            "paidTimeOffPolicy": {
+              "code": "PD",
+              "labelName": "Personal"
+            },
+            "earningType": {
+              "code": "p",
+              "labelName": "Personal"
+            },
+            "timePeriod": {
+              "startDateTime": "2013-03-29",
+              "endDateTime": "2013-03-29"
+            },
+            "totalQuantity": {
+              "valueNumber": 1,
+              "unitTimeCode": "day",
+              "labelName": "day"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "associateOID": "H5O73G9Z62SL2NFF",
+      "paidTimeOffBalances": [
+        {
+          "totalBalance": 5,
+          "positionRef": {
+            "positionID": {
+              "id": "11000199-1",
+              "schemeName": "PFID",
+              "schemeAgencyName": "ADP Registry"
+            },
+            "title": "North-East Region Manager"
+          },
+          "asOfDate": "2013-03-15",
+          "paidTimeOffPolicyBalances": [
+            {
+              "paidTimeOffPolicy": {
+                "code": "VD",
+                "labelName": "Vacation"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "available",
+                    "labelName": "Available"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 20,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                }
+              ]
+            },
+            {
+              "paidTimeOffPolicy": {
+                "code": "PD",
+                "labelName": "Personal"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "available",
+                    "labelName": "Available"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 2,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                },
+                {
+                  "balanceType": {
+                    "code": "taken",
+                    "labelName": "Used"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 2,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  },
+                  "paidTimeOffEntries": [
+                    {
+                      "paidTimeOffID": "125",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-02-13",
+                        "endDateTime": "2013-02-13"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/125"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r"
+                        ]
+                      }
+                    },
+                    {
+                      "paidTimeOffID": "126",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-03-14",
+                        "endDateTime": "2013-03-14"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/126"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "balanceType": {
+                    "code": "initialize",
+                    "labelName": "Approved"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 1,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  },
+                  "paidTimeOffEntries": [
+                    {
+                      "paidTimeOffID": "127",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-03-29",
+                        "endDateTime": "2013-03-29"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/127"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r",
+                          "u",
+                          "d"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "paidTimeOffPolicy": {
+                "code": "S",
+                "labelName": "Sick"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "taken",
+                    "labelName": "Taken"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 5,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "paidTimeOffRequest": {
+        "totalRequests": 2,
+        "positionRef": {
+          "positionID": {
+            "id": "11000199-1",
+            "schemeName": "PFID",
+            "schemeAgencyName": "ADP Registry"
+          },
+          "title": "North-East Region Manager"
+        },
+        "requestID": "127",
+        "entryDateTime": "2013-03-13",
+        "requestStatus": {
+          "code": "approved",
+          "labelName": "Approved"
+        },
+        "requestorComment": {
+          "entryDateTime": "2013-03-13",
+          "commentTxt": "Personal Matter"
+        },
+        "comments": [
+          {
+            "entryDateTime": "2013-03-18",
+            "commentTxt": "No problem Anthony!",
+            "userName": "Corey Hillard"
+          }
+        ],
+        "totalQuantity": {
+          "valueNumber": 3,
+          "unitTimeCode": "day",
+          "labelName": "day"
+        },
+        "meta": {
+          "metadataEntitlementCodes": [
+            "r"
+          ],
+          "multiPeriodRequestIndicator": true
+        },
+        "paidTimeOffEntries": [
+          {
+            "paidTimeOffID": "127",
+            "paidTimeOffPolicy": {
+              "code": "PD",
+              "labelName": "Personal"
+            },
+            "earningType": {
+              "code": "p",
+              "labelName": "Personal"
+            },
+            "timePeriod": {
+              "startDateTime": "2013-03-29",
+              "endDateTime": "2013-03-29"
+            },
+            "totalQuantity": {
+              "valueNumber": 1,
+              "unitTimeCode": "day",
+              "labelName": "day"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "associateOID": "H5O73G9Z62SL2NFG",
+      "paidTimeOffBalances": [
+        {
+          "totalBalance": 5,
+          "positionRef": {
+            "positionID": {
+              "id": "11000199-1",
+              "schemeName": "PFID",
+              "schemeAgencyName": "ADP Registry"
+            },
+            "title": "North-East Region Manager"
+          },
+          "asOfDate": "2013-03-15",
+          "paidTimeOffPolicyBalances": [
+            {
+              "paidTimeOffPolicy": {
+                "code": "VD",
+                "labelName": "Vacation"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "available",
+                    "labelName": "Available"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 20,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                }
+              ]
+            },
+            {
+              "paidTimeOffPolicy": {
+                "code": "PD",
+                "labelName": "Personal"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "available",
+                    "labelName": "Available"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 2,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                },
+                {
+                  "balanceType": {
+                    "code": "taken",
+                    "labelName": "Used"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 2,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  },
+                  "paidTimeOffEntries": [
+                    {
+                      "paidTimeOffID": "125",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-02-13",
+                        "endDateTime": "2013-02-13"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/125"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r"
+                        ]
+                      }
+                    },
+                    {
+                      "paidTimeOffID": "126",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-03-14",
+                        "endDateTime": "2013-03-14"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/126"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "balanceType": {
+                    "code": "initialize",
+                    "labelName": "Approved"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 1,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  },
+                  "paidTimeOffEntries": [
+                    {
+                      "paidTimeOffID": "127",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-03-29",
+                        "endDateTime": "2013-03-29"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/127"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r",
+                          "u",
+                          "d"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "paidTimeOffPolicy": {
+                "code": "S",
+                "labelName": "Sick"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "taken",
+                    "labelName": "Taken"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 5,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "paidTimeOffRequest": {
+        "totalRequests": 2,
+        "positionRef": {
+          "positionID": {
+            "id": "11000199-1",
+            "schemeName": "PFID",
+            "schemeAgencyName": "ADP Registry"
+          },
+          "title": "North-East Region Manager"
+        },
+        "requestID": "127",
+        "entryDateTime": "2013-03-13",
+        "requestStatus": {
+          "code": "approved",
+          "labelName": "Approved"
+        },
+        "requestorComment": {
+          "entryDateTime": "2013-03-13",
+          "commentTxt": "Personal Matter"
+        },
+        "comments": [
+          {
+            "entryDateTime": "2013-03-18",
+            "commentTxt": "No problem Anthony!",
+            "userName": "Corey Hillard"
+          }
+        ],
+        "totalQuantity": {
+          "valueNumber": 3,
+          "unitTimeCode": "day",
+          "labelName": "day"
+        },
+        "meta": {
+          "metadataEntitlementCodes": [
+            "r"
+          ],
+          "multiPeriodRequestIndicator": true
+        },
+        "paidTimeOffEntries": [
+          {
+            "paidTimeOffID": "127",
+            "paidTimeOffPolicy": {
+              "code": "PD",
+              "labelName": "Personal"
+            },
+            "earningType": {
+              "code": "p",
+              "labelName": "Personal"
+            },
+            "timePeriod": {
+              "startDateTime": "2013-03-29",
+              "endDateTime": "2013-03-29"
+            },
+            "totalQuantity": {
+              "valueNumber": 1,
+              "unitTimeCode": "day",
+              "labelName": "day"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "associateOID": "H5O73G9Z62SL2NFH",
+      "paidTimeOffBalances": [
+        {
+          "totalBalance": 5,
+          "positionRef": {
+            "positionID": {
+              "id": "11000199-1",
+              "schemeName": "PFID",
+              "schemeAgencyName": "ADP Registry"
+            },
+            "title": "North-East Region Manager"
+          },
+          "asOfDate": "2013-03-15",
+          "paidTimeOffPolicyBalances": [
+            {
+              "paidTimeOffPolicy": {
+                "code": "VD",
+                "labelName": "Vacation"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "available",
+                    "labelName": "Available"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 20,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                }
+              ]
+            },
+            {
+              "paidTimeOffPolicy": {
+                "code": "PD",
+                "labelName": "Personal"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "available",
+                    "labelName": "Available"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 2,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                },
+                {
+                  "balanceType": {
+                    "code": "taken",
+                    "labelName": "Used"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 2,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  },
+                  "paidTimeOffEntries": [
+                    {
+                      "paidTimeOffID": "125",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-02-13",
+                        "endDateTime": "2013-02-13"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/125"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r"
+                        ]
+                      }
+                    },
+                    {
+                      "paidTimeOffID": "126",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-03-14",
+                        "endDateTime": "2013-03-14"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/126"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "balanceType": {
+                    "code": "initialize",
+                    "labelName": "Approved"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 1,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  },
+                  "paidTimeOffEntries": [
+                    {
+                      "paidTimeOffID": "127",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-03-29",
+                        "endDateTime": "2013-03-29"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/127"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r",
+                          "u",
+                          "d"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "paidTimeOffPolicy": {
+                "code": "S",
+                "labelName": "Sick"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "taken",
+                    "labelName": "Taken"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 5,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "paidTimeOffRequest": {
+        "totalRequests": 2,
+        "positionRef": {
+          "positionID": {
+            "id": "11000199-1",
+            "schemeName": "PFID",
+            "schemeAgencyName": "ADP Registry"
+          },
+          "title": "North-East Region Manager"
+        },
+        "requestID": "127",
+        "entryDateTime": "2013-03-13",
+        "requestStatus": {
+          "code": "approved",
+          "labelName": "Approved"
+        },
+        "requestorComment": {
+          "entryDateTime": "2013-03-13",
+          "commentTxt": "Personal Matter"
+        },
+        "comments": [
+          {
+            "entryDateTime": "2013-03-18",
+            "commentTxt": "No problem Anthony!",
+            "userName": "Corey Hillard"
+          }
+        ],
+        "totalQuantity": {
+          "valueNumber": 3,
+          "unitTimeCode": "day",
+          "labelName": "day"
+        },
+        "meta": {
+          "metadataEntitlementCodes": [
+            "r"
+          ],
+          "multiPeriodRequestIndicator": true
+        },
+        "paidTimeOffEntries": [
+          {
+            "paidTimeOffID": "127",
+            "paidTimeOffPolicy": {
+              "code": "PD",
+              "labelName": "Personal"
+            },
+            "earningType": {
+              "code": "p",
+              "labelName": "Personal"
+            },
+            "timePeriod": {
+              "startDateTime": "2013-03-29",
+              "endDateTime": "2013-03-29"
+            },
+            "totalQuantity": {
+              "valueNumber": 1,
+              "unitTimeCode": "day",
+              "labelName": "day"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "associateOID": "H5O73G9Z62SL2NFI",
+      "paidTimeOffBalances": [
+        {
+          "totalBalance": 5,
+          "positionRef": {
+            "positionID": {
+              "id": "11000199-1",
+              "schemeName": "PFID",
+              "schemeAgencyName": "ADP Registry"
+            },
+            "title": "North-East Region Manager"
+          },
+          "asOfDate": "2013-03-15",
+          "paidTimeOffPolicyBalances": [
+            {
+              "paidTimeOffPolicy": {
+                "code": "VD",
+                "labelName": "Vacation"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "available",
+                    "labelName": "Available"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 20,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                }
+              ]
+            },
+            {
+              "paidTimeOffPolicy": {
+                "code": "PD",
+                "labelName": "Personal"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "available",
+                    "labelName": "Available"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 2,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                },
+                {
+                  "balanceType": {
+                    "code": "taken",
+                    "labelName": "Used"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 2,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  },
+                  "paidTimeOffEntries": [
+                    {
+                      "paidTimeOffID": "125",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-02-13",
+                        "endDateTime": "2013-02-13"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/125"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r"
+                        ]
+                      }
+                    },
+                    {
+                      "paidTimeOffID": "126",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-03-14",
+                        "endDateTime": "2013-03-14"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/126"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "balanceType": {
+                    "code": "initialize",
+                    "labelName": "Approved"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 1,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  },
+                  "paidTimeOffEntries": [
+                    {
+                      "paidTimeOffID": "127",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-03-29",
+                        "endDateTime": "2013-03-29"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/127"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r",
+                          "u",
+                          "d"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "paidTimeOffPolicy": {
+                "code": "S",
+                "labelName": "Sick"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "taken",
+                    "labelName": "Taken"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 5,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "paidTimeOffRequest": {
+        "totalRequests": 2,
+        "positionRef": {
+          "positionID": {
+            "id": "11000199-1",
+            "schemeName": "PFID",
+            "schemeAgencyName": "ADP Registry"
+          },
+          "title": "North-East Region Manager"
+        },
+        "requestID": "127",
+        "entryDateTime": "2013-03-13",
+        "requestStatus": {
+          "code": "approved",
+          "labelName": "Approved"
+        },
+        "requestorComment": {
+          "entryDateTime": "2013-03-13",
+          "commentTxt": "Personal Matter"
+        },
+        "comments": [
+          {
+            "entryDateTime": "2013-03-18",
+            "commentTxt": "No problem Anthony!",
+            "userName": "Corey Hillard"
+          }
+        ],
+        "totalQuantity": {
+          "valueNumber": 3,
+          "unitTimeCode": "day",
+          "labelName": "day"
+        },
+        "meta": {
+          "metadataEntitlementCodes": [
+            "r"
+          ],
+          "multiPeriodRequestIndicator": true
+        },
+        "paidTimeOffEntries": [
+          {
+            "paidTimeOffID": "127",
+            "paidTimeOffPolicy": {
+              "code": "PD",
+              "labelName": "Personal"
+            },
+            "earningType": {
+              "code": "p",
+              "labelName": "Personal"
+            },
+            "timePeriod": {
+              "startDateTime": "2013-03-29",
+              "endDateTime": "2013-03-29"
+            },
+            "totalQuantity": {
+              "valueNumber": 1,
+              "unitTimeCode": "day",
+              "labelName": "day"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "associateOID": "H5O73G9Z62SL2NFJ",
+      "paidTimeOffBalances": [
+        {
+          "totalBalance": 5,
+          "positionRef": {
+            "positionID": {
+              "id": "11000199-1",
+              "schemeName": "PFID",
+              "schemeAgencyName": "ADP Registry"
+            },
+            "title": "North-East Region Manager"
+          },
+          "asOfDate": "2013-03-15",
+          "paidTimeOffPolicyBalances": [
+            {
+              "paidTimeOffPolicy": {
+                "code": "VD",
+                "labelName": "Vacation"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "available",
+                    "labelName": "Available"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 20,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                }
+              ]
+            },
+            {
+              "paidTimeOffPolicy": {
+                "code": "PD",
+                "labelName": "Personal"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "available",
+                    "labelName": "Available"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 2,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                },
+                {
+                  "balanceType": {
+                    "code": "taken",
+                    "labelName": "Used"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 2,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  },
+                  "paidTimeOffEntries": [
+                    {
+                      "paidTimeOffID": "125",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-02-13",
+                        "endDateTime": "2013-02-13"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/125"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r"
+                        ]
+                      }
+                    },
+                    {
+                      "paidTimeOffID": "126",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-03-14",
+                        "endDateTime": "2013-03-14"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/126"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "balanceType": {
+                    "code": "initialize",
+                    "labelName": "Approved"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 1,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  },
+                  "paidTimeOffEntries": [
+                    {
+                      "paidTimeOffID": "127",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-03-29",
+                        "endDateTime": "2013-03-29"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/127"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r",
+                          "u",
+                          "d"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "paidTimeOffPolicy": {
+                "code": "S",
+                "labelName": "Sick"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "taken",
+                    "labelName": "Taken"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 5,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "paidTimeOffRequest": {
+        "totalRequests": 2,
+        "positionRef": {
+          "positionID": {
+            "id": "11000199-1",
+            "schemeName": "PFID",
+            "schemeAgencyName": "ADP Registry"
+          },
+          "title": "North-East Region Manager"
+        },
+        "requestID": "127",
+        "entryDateTime": "2013-03-13",
+        "requestStatus": {
+          "code": "approved",
+          "labelName": "Approved"
+        },
+        "requestorComment": {
+          "entryDateTime": "2013-03-13",
+          "commentTxt": "Personal Matter"
+        },
+        "comments": [
+          {
+            "entryDateTime": "2013-03-18",
+            "commentTxt": "No problem Anthony!",
+            "userName": "Corey Hillard"
+          }
+        ],
+        "totalQuantity": {
+          "valueNumber": 3,
+          "unitTimeCode": "day",
+          "labelName": "day"
+        },
+        "meta": {
+          "metadataEntitlementCodes": [
+            "r"
+          ],
+          "multiPeriodRequestIndicator": true
+        },
+        "paidTimeOffEntries": [
+          {
+            "paidTimeOffID": "127",
+            "paidTimeOffPolicy": {
+              "code": "PD",
+              "labelName": "Personal"
+            },
+            "earningType": {
+              "code": "p",
+              "labelName": "Personal"
+            },
+            "timePeriod": {
+              "startDateTime": "2013-03-29",
+              "endDateTime": "2013-03-29"
+            },
+            "totalQuantity": {
+              "valueNumber": 1,
+              "unitTimeCode": "day",
+              "labelName": "day"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "associateOID": "H5O73G9Z62SL2NFK",
+      "paidTimeOffBalances": [
+        {
+          "totalBalance": 5,
+          "positionRef": {
+            "positionID": {
+              "id": "11000199-1",
+              "schemeName": "PFID",
+              "schemeAgencyName": "ADP Registry"
+            },
+            "title": "North-East Region Manager"
+          },
+          "asOfDate": "2013-03-15",
+          "paidTimeOffPolicyBalances": [
+            {
+              "paidTimeOffPolicy": {
+                "code": "VD",
+                "labelName": "Vacation"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "available",
+                    "labelName": "Available"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 20,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                }
+              ]
+            },
+            {
+              "paidTimeOffPolicy": {
+                "code": "PD",
+                "labelName": "Personal"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "available",
+                    "labelName": "Available"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 2,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                },
+                {
+                  "balanceType": {
+                    "code": "taken",
+                    "labelName": "Used"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 2,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  },
+                  "paidTimeOffEntries": [
+                    {
+                      "paidTimeOffID": "125",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-02-13",
+                        "endDateTime": "2013-02-13"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/125"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r"
+                        ]
+                      }
+                    },
+                    {
+                      "paidTimeOffID": "126",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-03-14",
+                        "endDateTime": "2013-03-14"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/126"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "balanceType": {
+                    "code": "initialize",
+                    "labelName": "Approved"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 1,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  },
+                  "paidTimeOffEntries": [
+                    {
+                      "paidTimeOffID": "127",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-03-29",
+                        "endDateTime": "2013-03-29"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/127"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r",
+                          "u",
+                          "d"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "paidTimeOffPolicy": {
+                "code": "S",
+                "labelName": "Sick"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "taken",
+                    "labelName": "Taken"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 5,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "paidTimeOffRequest": {
+        "totalRequests": 4,
+        "positionRef": {
+          "positionID": {
+            "id": "11000199-1",
+            "schemeName": "PFID",
+            "schemeAgencyName": "ADP Registry"
+          },
+          "title": "North-East Region Manager"
+        },
+        "requestID": "127",
+        "entryDateTime": "2013-03-13",
+        "requestStatus": {
+          "code": "approved",
+          "labelName": "Approved"
+        },
+        "requestorComment": {
+          "entryDateTime": "2013-03-13",
+          "commentTxt": "Personal Matter"
+        },
+        "comments": [
+          {
+            "entryDateTime": "2013-03-18",
+            "commentTxt": "No problem Anthony!",
+            "userName": "Corey Hillard"
+          }
+        ],
+        "totalQuantity": {
+          "valueNumber": 3,
+          "unitTimeCode": "day",
+          "labelName": "day"
+        },
+        "meta": {
+          "metadataEntitlementCodes": [
+            "r"
+          ],
+          "multiPeriodRequestIndicator": true
+        },
+        "paidTimeOffEntries": [
+          {
+            "paidTimeOffID": "127",
+            "paidTimeOffPolicy": {
+              "code": "PD",
+              "labelName": "Personal"
+            },
+            "earningType": {
+              "code": "p",
+              "labelName": "Personal"
+            },
+            "timePeriod": {
+              "startDateTime": "2013-03-29",
+              "endDateTime": "2013-03-29"
+            },
+            "totalQuantity": {
+              "valueNumber": 1,
+              "unitTimeCode": "day",
+              "labelName": "day"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "associateOID": "H5O73G9Z62SL2NFL",
+      "paidTimeOffBalances": [
+        {
+          "totalBalance": 5,
+          "positionRef": {
+            "positionID": {
+              "id": "11000199-1",
+              "schemeName": "PFID",
+              "schemeAgencyName": "ADP Registry"
+            },
+            "title": "North-East Region Manager"
+          },
+          "asOfDate": "2013-03-15",
+          "paidTimeOffPolicyBalances": [
+            {
+              "paidTimeOffPolicy": {
+                "code": "VD",
+                "labelName": "Vacation"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "available",
+                    "labelName": "Available"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 20,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                }
+              ]
+            },
+            {
+              "paidTimeOffPolicy": {
+                "code": "PD",
+                "labelName": "Personal"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "available",
+                    "labelName": "Available"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 2,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                },
+                {
+                  "balanceType": {
+                    "code": "taken",
+                    "labelName": "Used"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 2,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  },
+                  "paidTimeOffEntries": [
+                    {
+                      "paidTimeOffID": "125",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-02-13",
+                        "endDateTime": "2013-02-13"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/125"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r"
+                        ]
+                      }
+                    },
+                    {
+                      "paidTimeOffID": "126",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-03-14",
+                        "endDateTime": "2013-03-14"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/126"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "balanceType": {
+                    "code": "initialize",
+                    "labelName": "Approved"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 1,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  },
+                  "paidTimeOffEntries": [
+                    {
+                      "paidTimeOffID": "127",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-03-29",
+                        "endDateTime": "2013-03-29"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/127"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r",
+                          "u",
+                          "d"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "paidTimeOffPolicy": {
+                "code": "S",
+                "labelName": "Sick"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "taken",
+                    "labelName": "Taken"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 5,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "paidTimeOffRequest": {
+        "totalRequests": 3,
+        "positionRef": {
+          "positionID": {
+            "id": "11000199-1",
+            "schemeName": "PFID",
+            "schemeAgencyName": "ADP Registry"
+          },
+          "title": "North-East Region Manager"
+        },
+        "requestID": "127",
+        "entryDateTime": "2013-03-13",
+        "requestStatus": {
+          "code": "approved",
+          "labelName": "Approved"
+        },
+        "requestorComment": {
+          "entryDateTime": "2013-03-13",
+          "commentTxt": "Personal Matter"
+        },
+        "comments": [
+          {
+            "entryDateTime": "2013-03-18",
+            "commentTxt": "No problem Anthony!",
+            "userName": "Corey Hillard"
+          }
+        ],
+        "totalQuantity": {
+          "valueNumber": 3,
+          "unitTimeCode": "day",
+          "labelName": "day"
+        },
+        "meta": {
+          "metadataEntitlementCodes": [
+            "r"
+          ],
+          "multiPeriodRequestIndicator": true
+        },
+        "paidTimeOffEntries": [
+          {
+            "paidTimeOffID": "127",
+            "paidTimeOffPolicy": {
+              "code": "PD",
+              "labelName": "Personal"
+            },
+            "earningType": {
+              "code": "p",
+              "labelName": "Personal"
+            },
+            "timePeriod": {
+              "startDateTime": "2013-03-29",
+              "endDateTime": "2013-03-29"
+            },
+            "totalQuantity": {
+              "valueNumber": 1,
+              "unitTimeCode": "day",
+              "labelName": "day"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "associateOID": "H5O73G9Z62SL2NFM",
+      "paidTimeOffBalances": [
+        {
+          "totalBalance": 5,
+          "positionRef": {
+            "positionID": {
+              "id": "11000199-1",
+              "schemeName": "PFID",
+              "schemeAgencyName": "ADP Registry"
+            },
+            "title": "North-East Region Manager"
+          },
+          "asOfDate": "2013-03-15",
+          "paidTimeOffPolicyBalances": [
+            {
+              "paidTimeOffPolicy": {
+                "code": "VD",
+                "labelName": "Vacation"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "available",
+                    "labelName": "Available"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 20,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                }
+              ]
+            },
+            {
+              "paidTimeOffPolicy": {
+                "code": "PD",
+                "labelName": "Personal"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "available",
+                    "labelName": "Available"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 2,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                },
+                {
+                  "balanceType": {
+                    "code": "taken",
+                    "labelName": "Used"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 2,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  },
+                  "paidTimeOffEntries": [
+                    {
+                      "paidTimeOffID": "125",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-02-13",
+                        "endDateTime": "2013-02-13"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/125"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r"
+                        ]
+                      }
+                    },
+                    {
+                      "paidTimeOffID": "126",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-03-14",
+                        "endDateTime": "2013-03-14"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/126"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "balanceType": {
+                    "code": "initialize",
+                    "labelName": "Approved"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 1,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  },
+                  "paidTimeOffEntries": [
+                    {
+                      "paidTimeOffID": "127",
+                      "earningType": {
+                        "code": "p",
+                        "labelName": "Personal"
+                      },
+                      "timePeriod": {
+                        "startDateTime": "2013-03-29",
+                        "endDateTime": "2013-03-29"
+                      },
+                      "totalQuantity": {
+                        "valueNumber": 1,
+                        "unitTimeCode": "day",
+                        "labelName": "day"
+                      },
+                      "requestRef": {
+                        "requestUri": {
+                          "href": "/v2/O/G4O73G9Z62SL2NFM/paidTimeOffRequest/127"
+                        },
+                        "metadataEntitlementCodes": [
+                          "r",
+                          "u",
+                          "d"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "paidTimeOffPolicy": {
+                "code": "S",
+                "labelName": "Sick"
+              },
+              "policyBalances": [
+                {
+                  "balanceType": {
+                    "code": "taken",
+                    "labelName": "Taken"
+                  },
+                  "totalQuantity": {
+                    "valueNumber": 5,
+                    "unitTimeCode": "day",
+                    "labelName": "day(s)"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "paidTimeOffRequest": {
+        "totalRequests": 4,
+        "positionRef": {
+          "positionID": {
+            "id": "11000199-1",
+            "schemeName": "PFID",
+            "schemeAgencyName": "ADP Registry"
+          },
+          "title": "North-East Region Manager"
+        },
+        "requestID": "127",
+        "entryDateTime": "2013-03-13",
+        "requestStatus": {
+          "code": "approved",
+          "labelName": "Approved"
+        },
+        "requestorComment": {
+          "entryDateTime": "2013-03-13",
+          "commentTxt": "Personal Matter"
+        },
+        "comments": [
+          {
+            "entryDateTime": "2013-03-18",
+            "commentTxt": "No problem Anthony!",
+            "userName": "Corey Hillard"
+          }
+        ],
+        "totalQuantity": {
+          "valueNumber": 3,
+          "unitTimeCode": "day",
+          "labelName": "day"
+        },
+        "meta": {
+          "metadataEntitlementCodes": [
+            "r"
+          ],
+          "multiPeriodRequestIndicator": true
+        },
+        "paidTimeOffEntries": [
+          {
+            "paidTimeOffID": "127",
+            "paidTimeOffPolicy": {
+              "code": "PD",
+              "labelName": "Personal"
+            },
+            "earningType": {
+              "code": "p",
+              "labelName": "Personal"
+            },
+            "timePeriod": {
+              "startDateTime": "2013-03-29",
+              "endDateTime": "2013-03-29"
+            },
+            "totalQuantity": {
+              "valueNumber": 1,
+              "unitTimeCode": "day",
+              "labelName": "day"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

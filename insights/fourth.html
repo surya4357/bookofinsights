@@ -1,0 +1,81 @@
+
+<div id="benchmarking" style="min-width: 310px; width:100%; height:500px; margin:0 auto;"></div>
+<div id="source" class="pull-right"><small>(Source: PayScale)</small></div>
+<script>
+$(function(){
+
+    setTimeout(runBench, 500);
+
+});
+function runBench() {
+    var market_salary = {
+        "Retail Sales Person" : 12000,
+        "Registered Nurse" : 38000,
+        "Cashier" : 10000,
+        "Office Clerk" : 8000
+    };
+
+    var our_avg_salary = {};
+    var retail_sal=0, nurse_sal=0, cashier_sal=0, clerk_sal=0;
+    var retail_avg, nurse_avg, cashier_avg, clerk_avg;
+    $.each(workers_pay, function(i){
+        
+        if(workers_pay[i].occupation == "Retail Sales Person")
+            retail_sal+=workers_pay[i].pay;
+        
+        if(workers_pay[i].occupation == "Registered Nurse")
+            nurse_sal+=workers_pay[i].pay;
+
+        if(workers_pay[i].occupation == "Cashier")
+            cashier_sal+=workers_pay[i].pay;
+
+        if(workers_pay[i].occupation == "Office Clerk")
+            clerk_sal+=workers_pay[i].pay;
+        
+        // console.log(workers_pay[i]);
+    });
+
+    console.log(retail_sal);
+    retail_avg = Math.round(retail_sal/workers[months[curr_month]]["Retail Sales Person"]);
+    nurse_avg = Math.round(nurse_sal/workers[months[curr_month]]["Registered Nurse"]);
+    cashier_avg = Math.round(cashier_sal/workers[months[curr_month]]["Cashier"]);
+    clerk_avg = Math.round(clerk_sal/workers[months[curr_month]]["Office Clerk"]);
+
+    $('#benchmarking').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Salary Benchmarking'
+        },
+        xAxis: {
+            categories: ['Retail Sales Person', 'Registered Nurse', 'Cashier', 'Office Clerk']
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Average Salary'
+            }
+        },
+        legend: {
+            reversed: true
+        },
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled:true
+                }
+            }
+        },
+        series: [{
+            name: 'Market Pays',
+            data: [market_salary["Retail Sales Person"], market_salary["Registered Nurse"], market_salary["Cashier"], market_salary["Office Clerk"]]
+        }, {
+            name: 'You Pay',
+            data: [retail_avg, nurse_avg, cashier_avg, clerk_avg]
+        }]
+    });
+
+    $('.highcharts-button').css("display", "none");
+}
+</script>

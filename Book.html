@@ -1,0 +1,685 @@
+
+<html class="no-js"> <!--<![endif]-->
+<head>
+   <meta charset="utf-8" />
+   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+   <!-- Mobile viewport optimized: h5bp.com/viewport -->
+   <meta name="viewport" content="width=device-width">
+
+   <title>Book of Insights</title>
+
+   <meta name="robots" content="noindex, nofollow">
+   <meta name="description" content="BootMetro : Simple and complete web UI framework to create web apps with Windows 8 Metro user interface." />
+   <meta name="keywords" content="bootmetro, modern ui, modern-ui, metro, metroui, metro-ui, metro ui, windows 8, metro style, bootstrap, framework, web framework, css, html" />
+   <meta name="author" content="AozoraLabs by Marcello Palmitessa"/>
+   <link rel="publisher" href="https://plus.google.com/117689250782136016574">
+
+   <!-- remove or comment this line if you want to use the local fonts -->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+
+   <link rel="stylesheet" type="text/css" href="./assets/css/bootmetro.css">
+   <link rel="stylesheet" type="text/css" href="./assets/css/jquery-ui.min.css">
+   <link rel="stylesheet" type="text/css" href="./assets/css/bootmetro-responsive.css">
+   <link rel="stylesheet" type="text/css" href="./assets/css/bootmetro-icons.css">
+   <link rel="stylesheet" type="text/css" href="./assets/css/bootmetro-ui-light.css">
+   <link rel="stylesheet" type="text/css" href="./assets/css/datepicker.css">
+   <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap-rating.css">
+
+   <!--  these two css are to use only for documentation -->
+   <!-- <link rel="stylesheet" type="text/css" href="./assets/css/demo.css"> -->
+
+   <!-- Le fav and touch icons -->
+   <link rel="shortcut icon" href="./assets/ico/favicon.ico">
+   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png">
+   <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png">
+  
+   <!-- All JavaScript at the bottom, except for Modernizr and Respond.
+      Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+      For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+   <script src="./assets/js/jquery-1.10.0.min.js"></script>
+   <style type='text/css'>
+      .ss
+      {
+         overflow-y: scroll;
+         height: 71%;
+      }
+      .push
+      {
+         margin-left:28%;
+         -webkit-animation: myfirst 5s linear 2s infinite alternate; /* Chrome, Safari, Opera */
+         animation: myfirst 5s linear 2s infinite alternate;
+      }
+      #alerts-container {
+         position: fixed;
+         top: 5px;
+         right: 5px;
+         padding: 0;
+         z-index: 1100;
+      }
+       
+      #alerts-container .toast {
+         /* add a shadow */
+         -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+      }
+      ::-webkit-scrollbar { 
+         display: none; 
+      }
+   </style>
+   <script type="text/javascript">
+   $.ajax(
+      {
+         url : './data/book.json',
+         dataType : 'text',
+         success : function(contents)
+         {
+            var Contents = $.parseJSON(contents);
+            var pagesExist = new Array();
+            if(typeof(Storage)!= undefined)
+            {
+                  
+                  if(localStorage["Pages"]!= undefined)
+                  {
+                     //console.log(localStorage["arr"]+" this");
+                     pagesExist = JSON.parse(localStorage["Pages"]);
+                  }
+                  else
+                  {
+                     // var arr = new Array();
+                     // arr.push('1');
+                     // arr.push('2');
+                     // //localStorage["Pages"]=JSON.stringify(arr);
+                     // //console.log(localStorage["user2"]+" this");
+                  }
+             }
+            
+            //console.log(Page);
+            for(page in Contents.Pages)
+            {
+               console.log(Contents.Pages[page]);
+               var Page = Contents.Pages[page];
+               if($.inArray(Page['id'], pagesExist) == -1)
+               {
+               var html = "<div  id='tile-"+Page['id']+"'class='tile loadTile "+Page['size']+" bg-color-"+Page['color']+
+                     " "+Page['tile-properties']+"'"+" style='height:90px;width:90px;z-index:1;'>"
+                     +"<img src='"+Page['img']+"' />"
+                     +"<div class='main'>"
+                     +"<div class='"+Page['text-properties']+"textover-wrapper transparent' style='height:20%;''>"+Page['title']+"</div>"
+                     +"</div>"
+                     +"<div class='hover' style='display:none;'>"
+                     +"<div class='textover-wrapper' style='height:100%;background:white; color:black;'>"
+                     +"<div class=''>"+Page['title']+"</div>"
+                     +"<div class=''><br><span class='badge badge-info'>"+setCost()+"</span></div>"
+                     +"</div>"
+                     +"</div>"
+                     +"</div>";
+               
+               $(".contents").append(html);
+
+               $(".contents .loadTile").draggable({
+                revert: 'invalid',
+                start: startedDrag,
+                stop:stoppedDrag
+               });
+           	   }
+           	   else
+           	   {
+           	   		var html = "<a href='Insights.html?"+Page['id']+"' id='tile-"+Page['id']+"'class='tile loadTile "+Page['size']+" bg-color-"+Page['color']+
+                     " "+Page['tile-properties']+"'"+">"
+                     +"<img src='"+Page['img']+"' />"
+                     +"<div class='main'>"
+                     +"<div class='"+Page['text-properties']+"textover-wrapper transparent' style='background-color:white;color:black;padding-left:0px;'>"+Page['title']+"<div class=''>"+createRating()+"</div></div>"
+                     +"</div>"
+                     +"<div class='hover' style='display:none;'>"
+                     +"<div class='textover-wrapper'  style='height:100%; background:white; color:black;'>"
+                     +"<div class='text2'>"+Page['title']+"</div>"
+                     +"<div class='text6'><br><small>"+Page['content']+"<small></div>"
+                     +"</div>"
+                     +"</div>"
+                     +"</a>";
+               
+               		 
+               		 $("#section1").append(html);	
+           	   }
+
+            }
+
+            //////Search
+
+
+            $('#Search').on('keyup', function(e)
+            {
+               e.preventDefault();
+               $('.contents').html("");
+
+               var count = 0;
+
+               for(page in Contents.Pages)
+               {
+
+                  var Page = Contents.Pages[page];
+
+                  console.log(Page['id']);
+
+                  if(Page['title'].toLowerCase().indexOf($(this).val().toLowerCase())!=-1)
+                  {
+
+                       var html = "<div  id='tile-"+Page['id']+"'class='tile loadTile "+Page['size']+" bg-color-"+Page['color']+
+                                    " "+Page['tile-properties']+"'"+" style='height:90px;width:90px;z-index:1;'>"
+                                    +"<img src='"+Page['img']+"' />"
+                                    +"<div class='main'>"
+                                    +"<div class='"+Page['text-properties']+"textover-wrapper transparent' style='height:20%;''>"+Page['title']+"</div>"
+                                    +"</div>"
+                                    +"<div class='hover' style='display:none;'>"
+                                    +"<div class='textover-wrapper' style='height:100%;background:white; color:black;'>"
+                                    +"<div class=''>"+Page['title']+"</div>"
+                                    +"<div class=''><br><span class='badge badge-info'>"+setCost()+"</span></div>"
+                                    +"</div>"
+                                    +"</div>"
+                                    +"</div>";
+                     
+                     $(".contents").append(html);
+                     count++;
+                  }
+               }
+               if(count<1)
+               {
+                  var html = '<br><br><div class="alert alert-warning" style="height:50px;"><b>I still haven\'t found</b> what I am looking for &nbsp;<a data-toggle="modal" href="#myModal2" class="" href="#"><span class="icon icon-arrow-right-5" style=""></span></a></div>'
+                  $(".contents").append(html);
+               }
+
+               $(".contents .loadTile").draggable({
+                revert: 'invalid',
+                start: startedDrag,
+                stop:stoppedDrag
+               });
+
+               $(".loadTile").hover(function(e)
+               {
+                     ID = $(this).attr('id');
+                     $("#"+ID+" .hover").fadeIn('fast');
+                     $("#"+ID+" .main").hide();
+               }
+
+                  , function(e)
+                  {
+                     ID = $(this).attr('id');
+                     //alert("k");
+                     $("#"+ID+" .hover").hide();
+                     $("#"+ID+" .main").fadeIn('fast');
+               });
+
+            });
+
+
+
+            /////////
+
+            $(".loadTile").hover(function(e)
+            {
+                  ID = $(this).attr('id');
+                  $("#"+ID+" .hover").fadeIn('fast');
+                  $("#"+ID+" .main").hide();
+               }
+
+               , function(e)
+               {
+                  ID = $(this).attr('id');
+                  //alert("k");
+                  $("#"+ID+" .hover").hide();
+                  $("#"+ID+" .main").fadeIn('fast');
+            });
+
+            $(".container").droppable({
+         // tolerance: "fit",
+
+         greedy: true,
+
+         drop: function(event, ui){
+         var html = ui.draggable.html();
+         var existFlag = 1;
+
+         if(typeof(Storage)!= undefined)
+         {
+                  
+               if(localStorage["Pages"]!= undefined)
+               {
+                   //console.log(localStorage["arr"]+" this");
+
+                    pagesExist = JSON.parse(localStorage["Pages"]);
+
+               		var did=$(ui.draggable).attr("id").split('-');
+
+                     if($.inArray(parseInt(did[1]),pagesExist)==-1)
+                     {
+
+                        pagesExist.push(parseInt(did[1]));
+
+                        localStorage["Pages"]=JSON.stringify(pagesExist);
+                     }
+                     else
+                     {
+                        existFlag =0;
+
+                        $('#charms').removeClass('in');
+                        $('body').removeClass('push');
+                        //alert('This Tile Already Exist !');
+                        // var $toast = $( $('#toast-example1')).clone();
+                        // $('#alerts-container').append($toast.addClass('in'));
+                        var html = '<div class="toast toasttext04 in">'+
+                                          '<button type="button" class="close" data-dismiss="alert"></button>'+
+                                          '<div class="toast-body">'+
+                                             '<h4 class="toast-heading">Already Bought !</h4>'+
+                                             '<p>You already bought this Insight</p>'+
+                                          '</div>'+
+                                       '</div>';
+                        $('#alerts-container').append(html);
+
+                        setTimeout(function k(){$('#alerts-container').children().first().remove();},3000);
+
+                     }
+               }
+               else
+               {
+               		 var did=$(ui.draggable).attr("id").split('-');
+
+                     pagesExist.push(parseInt(did[1]));
+
+                     localStorage["Pages"]=JSON.stringify(pagesExist);
+                     // //localStorage["Pages"]=JSON.stringify(arr);
+                     // //console.log(localStorage["user2"]+" this");
+                }
+         }
+
+
+         var did=$(ui.draggable).attr("id").split('-');
+
+         //$("#section1").append("<a href='#' id='"+$(ui.draggable).attr("id")+"' class='"+$(ui.draggable).attr("class")+"'>"+html+"</a>");
+         if(existFlag)
+         {
+            for(page in Contents.Pages)
+            {
+
+               var Page = Contents.Pages[page];
+
+               console.log(Page['id']);
+               console.log(did);
+
+               if(Page['id']==parseInt(did[1]))
+               {
+
+               var html = "<a href='Insights.html?"+Page['id']+"' id='tile-"+Page['id']+"'class='tile loadTile "+Page['size']+" bg-color-"+Page['color']+
+                        " "+Page['tile-properties']+"'"+">"
+                        +"<img src='"+Page['img']+"' />"
+                        +"<div class='main'>"
+                        +"<div class='"+Page['text-properties']+"textover-wrapper transparent' style='background-color:white;color:black;padding-left:0px;'>"+Page['title']+"<div class=''>"+createRating()+"</div></div>"
+                        +"</div>"
+                        +"<div class='hover' style='display:none;'>"
+                        +"<div class='textover-wrapper'  style='height:100%; background:white; color:black;'>"
+                        +"<div class='text2'>"+Page['title']+"</div>"
+                        +"<div class='text6'><br><small>"+Page['content']+"<small></div>"
+                        +"</div>"
+                        +"</div>"
+                        +"</a>";
+                  
+                         
+                         $("#section1").append(html);
+                         break;
+               }
+            }
+         }
+
+
+
+
+         $(".loadTile").hover(function(e)
+            {
+                  ID = $(this).attr('id');
+                  $("#"+ID+" .hover").fadeIn('slow');
+                  $("#"+ID+" .main").fadeOut('slow');
+               }
+
+               , function(e)
+               {
+                  ID = $(this).attr('id');
+                  //alert("k");
+                  $("#"+ID+" .hover").fadeOut('slow');
+                  $("#"+ID+" .main").fadeIn('slow');
+            });
+
+         $(ui.draggable).remove();
+         }
+         });
+
+        function startedDrag() {
+
+         $('#Insights').removeClass('ss');
+            
+        }
+        
+        function stoppedDrag() {
+
+            $('#Insights').addClass('ss');
+        }
+            
+            // <a class="tile square text bg-color-grayLight" href="#">
+            //          <div class="text-header">Header</div>
+            //          <div class="text">Text field 1</div>
+            //          <div class="text">Text field 2</div>
+            //          <div class="text">Text field 3</div>
+            // </a>
+
+            // $(".contents").append("<div class='tile draggable "+Page['size']+" bg-color-"+Page['color']+
+            //    "'"+" href='#'>");
+            // $(".contents").append("<div class='image-wrapper'><img src='"+Page['img']+"' /></div>");
+            // $(".contents").append("<span class='app-label'>"+Page['title']+"</span>");
+            // $(".contents").append("</div>");
+         }
+      });
+	//$( ".slide" ).droppable({ disabled: true });
+   </script>
+   <script src="./assets/js/modernizr-2.6.2.min.js"></script>
+   
+   <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-3182578-6']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+   </script>
+</head>
+
+<body>
+<div id="alerts-container"></div>
+
+   <!--[if lt IE 7]>
+   <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+   <![endif]-->
+
+   <!-- Header
+   ================================================== -->
+   <header id="nav-bar" class="container">
+      <div class="row">
+         <div class="span12">
+            <div id="header-container">
+               <h1>Book of Insights</h1>
+ 
+            </div>
+            <div id="top-info" class="pull-right">
+            <!-- <a id="settings" href="#" class="win-command pull-right">
+               <span class="win-commandicon win-commandring icon-cog-3"></span>
+            </a> -->
+            <a id="logged-user" href="#" class="win-command pull-right">
+               <!-- <span class="win-commandicon win-commandring icon-user"></span> -->
+               <img src='./assets/img/v.png' height="50" width="50" class='img-rounded' />
+            </a>
+            <div class="pull-left">
+               <h3 style="color: #24A0DA;font-weight: 300;">Rob</h3>
+               <h4 style="color: #24A0DA;font-weight: 300;">Roy</h4>
+            </div>
+         </div>
+      </div>
+      </div>
+   </header>
+   
+   <div class="container" style="height:75%">
+      <div class="row">
+         <div class="metro span12">
+            <div class="metro-sections">
+   
+               <div class="metro-section" id="section1">
+
+
+   
+                  <!-- <a class="tile wide imagetext bg-color-orange draggable" href="./list-detail.html">
+                     <div class="image-wrapper">
+                        <img src="assets/img/metro-tiles.jpg" />
+                     </div>
+                     <div class="column-text">
+                        <div class="text-header3">Listview with Details</div>
+                     </div>
+                  </a>
+   
+                  <a class="tile wide imagetext tile-double bg-color-green droppable" href="#">
+                     <div class="image-wrapper">
+                        <img src="assets/img/metro-tiles-wide.jpg" />
+                     </div>
+                     <div class="column-text">
+                        <div class="text-header3">...more to come...</div>
+                     </div>
+                  </a> -->
+
+                 
+   
+               </div>
+   
+            </div>
+         </div>
+      </div>
+
+       <div class="navbar navbar-fixed-bottom win-ui-dark">
+            <button class="win-command" id='buy' rel="tootlip" title="Command with icon and label with border ring">
+               <span class="win-commandimage win-commandring">
+                  <img src="assets/img/sample-tiles.png" width="42" height="42" alt=""/>
+               </span>
+               <span class="win-label">Buy</span>
+            </button>
+
+            <div class='pull-right'>
+            <button onclick="location.href='Insights.html';" class="win-command" rel="tootlip" title="Command with icon and label with border ring">
+               <span class="win-commandicon win-commandring icon-book-alt2"></span>
+               <span class="win-label">Read Insights</span>
+            </button>
+           	</div>
+       </div>
+
+   </div>   
+
+   <div id="charms" class="slide">
+   
+      <div id="theme-charms-section" class="charms-section">
+         <div class="charms-header">
+            <a href="#" class="win-backbutton" style="color: #24A0DA;" id='buy1'></a>
+            <h2 style="color: #24A0DA;">Insights</h2>
+         </div>
+         <div>
+              <input type="text" id="Search" style="width:100%" placeholder="Search">
+         </div>
+         <br>
+   
+         <div class="row-fluid">
+            <div class="span12 contents ss metro metro-sections" id='Insights'>
+
+
+   
+               <!-- <form class="">
+                  <label for="win-theme-select">Change theme:</label>
+                  <select id="win-theme-select" class="">
+                     <option value="metro-ui-light">Light</option>
+                     <option value="metro-ui-dark">Dark</option>
+                  </select>
+               </form> -->
+
+              <!--  <a class="tile square image bg-color-red nani" href="#">
+                              <div class='main'>
+                              <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Wulfenite_mexique.jpg/611px-Wulfenite_mexique.jpg" alt="">
+                              <div class="textover-wrapper transparent">
+                                 <div class="text2">Wulfenite </div>
+                              </div>
+                              </div>
+                              <div class='hover' style="display:none;">
+                              
+                              <div class="textover-wrapper transparent">
+                                 <div class="text2">Buy This</div>
+                              </div>
+                              </div>
+                  </a> -->
+
+               
+   
+            </div>
+         </div>
+      </div>
+   
+   </div>
+
+   <div id="myModal2" class="modal message hide fade">
+      
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+            <h3>Request for an Insight</h3>
+         </div>
+         <div class="modal-body">
+            <form role="form" class="form-horizontal">
+                 
+                 <div class="form-group">
+                   <textarea rows="8" class='form-control' placeholder='Describe your insight' style='width:100%;'></textarea>
+                 </div>
+                 <br>
+                 <div class="form-group">
+                   <input type="number" class="form-control" style='width:60%;' id="exampleInputEmail1" placeholder="How much are you willing to pay for this insight?">
+                 </div>
+                 
+                 
+               </form>
+         </div>
+         
+         <div class="modal-footer">
+            <a class="btn btn-danger" href='#' data-dismiss="modal">Close</a>
+            <a class="btn btn-success" href="#" id='SendRequest' data-dismiss="modal">Send Request</a>
+         </div>
+
+   </div>
+
+
+   <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+   <script src="./assets/js/jquery-1.10.0.min.js"></script>
+   <script>window.jQuery || document.write("<script src='assets/js/jquery-1.10.0.min.js'>\x3C/script>")</script>
+
+   <!--[if IE 7]>
+   <script type="text/javascript" src="scripts/bootmetro-icons-ie7.js">
+   <![endif]-->
+
+   <script type="text/javascript" src="./assets/js/jquery-ui.min.js"></script>
+   <script type="text/javascript" src="./assets/js/min/bootstrap.min.js"></script>
+   <script type="text/javascript" src="./assets/js/bootmetro-panorama.js"></script>
+   <script type="text/javascript" src="./assets/js/bootmetro-pivot.js"></script>
+   <script type="text/javascript" src="./assets/js/bootmetro-charms.js"></script>
+   <script type="text/javascript" src="./assets/js/bootstrap-rating.js"></script>
+   <script type="text/javascript" src="./assets/js/bootstrap-datepicker.js"></script>
+
+   <script type="text/javascript" src="./assets/js/jquery.mousewheel.min.js"></script>
+   <script type="text/javascript" src="./assets/js/jquery.touchSwipe.min.js"></script>
+
+   <script type="text/javascript" src="./assets/js/holder.js"></script>
+   <!--<script type="text/javascript" src="./assets/js/perfect-scrollbar.with-mousewheel.min.js"></script>-->
+   <script type="text/javascript" src="./assets/js/demo.js"></script>
+
+   <script type="text/javascript">
+   
+   $(document).ready(function(){
+
+      $('#buy').click(function()
+      {
+         if($('#charms').hasClass('in'))
+         {
+            $('#charms').removeClass('in');
+            $('body').removeClass('push');
+         }
+         else
+         {
+            $('#charms').addClass('in');
+            $('body').addClass('push');
+         }
+      });
+
+      $('#buy1').click(function()
+      {
+         if($('#charms').hasClass('in'))
+         {
+            $('#charms').removeClass('in');
+            $('body').removeClass('push');
+         }
+         else
+         {
+            $('#charms').addClass('in');
+            $('body').addClass('push');
+         }
+      });
+
+      $("a[href='#myModal2']").click(function()
+      {
+         
+      });
+
+      $('#SendRequest').click(function()
+      {
+         $('#charms').removeClass('in');
+         $('body').removeClass('push');  
+         var html = '<div class="toast toasttext05 in" style="background-color: #01a31c;border: 2px solid #5bb75b;">'+
+                                          '<button type="button" class="close" data-dismiss="alert"></button>'+
+                                          '<div class="toast-body">'+
+                                             '<p>Your request has been sent to developer community</p>'+
+                                          '</div>'+
+                                       '</div>';
+                        $('#alerts-container').append(html);
+                        setTimeout(function k(){$('#alerts-container').children().first().remove();},3000);
+      });
+
+     
+   });
+
+   function generateRandomRating()
+   {
+    var x = Math.floor((Math.random() * 5) + 1);
+    return x;
+   }
+
+   function generateRandomCost()
+   {
+    var x = Math.floor((Math.random() * 20) + 2);
+    return x;
+   }
+
+   function setCost()
+   {
+      var cost = generateRandomCost()
+      return "$ "+cost;
+   }
+
+   function createRating()
+   {
+      var rating = generateRandomRating();
+      var stars = "";
+      for(i=1;i<=rating;i++)
+      {
+         stars = stars + "<span class='icon icon-star'></span>";
+      }
+      return stars;
+   }
+
+   </script>
+
+   <script type="text/javascript">
+
+      $('.panorama').panorama({
+         //nicescroll: false,
+         showscrollbuttons: true,
+         keyboard: true,
+         parallax: true
+      });
+
+//      $(".panorama").perfectScrollbar();
+
+      $('#pivot').pivot();
+
+   </script>
+   <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+</body>
+</html>

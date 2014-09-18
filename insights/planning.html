@@ -1,0 +1,251 @@
+
+	<style type="text/css">
+	#chartdiv {
+	width	: auto;
+	height	: 250px;
+	}
+	</style>
+
+	<div class='col-md-12'>
+		<div class="col-md-5 panel panel-info" style="padding:0px;">
+			<div class="panel-heading"><h4 class='panel-title'>Current Work Force</h4></div>
+			<div class='panel-body'>
+			
+			<ul class="list-group" id='currentWorkForce' style="padding:0px;margin:0px;">
+			  
+			</ul>
+			
+
+			</div>
+		</div>
+		<div class="col-md-2">
+		</div>
+		<div class="col-md-5 panel panel-info" style="padding:0px;">
+			<div class="panel-heading"><h4 class="panel-title">Employeement Projection<div id="source" class="pull-right"><small style="font-size:10px;">(Source: Bureau of Labor Statistics)</small></div></h4><!-- <small><i>Based on</i>: Bureau of Labor Statistics</small> --></div>
+			<div class="panel-body">
+
+			<ul class="list-group" id="futureWorkForce" style="padding:0px;margin:0px;">
+			  
+			<li class="list-group-item" style="border:0px;"><span class="badge" style="background-color:black;">9.8 %</span>Retail Sales Persons</li><li class="list-group-item" style="border:0px;"><span class="badge" style="background-color:black;">2.6 %</span>Cashier</li><li class="list-group-item" style="border:0px;"><span class="badge" style="background-color:black;">19.4 %</span>Registared Nurses</li><li class="list-group-item" style="border:0px;"><span class="badge" style="background-color:black;">6.2 %</span>Office Clerks</li>
+			</ul>
+
+			</div>
+		</div>
+
+	</div>
+	<br>
+	<div class='col-md-6 col-md-offset-3 thumbnail panel-info' style="padding:0px;">
+		<div class="panel-heading"><h4 class="panel-title">Where to Hire - Based on Unemployment<div id="source" class="pull-right"><small style="font-size:10px;">(Source: Bureau of Labor Statistics)</small></div></h4></div>
+		<div class="panel-body">
+			<div id="chartdiv"></div>
+		</div>
+	</div>
+
+<script type="text/javascript">
+
+	var map = AmCharts.makeChart("chartdiv", {
+	type: "map",
+    "theme": "light",
+    pathToImages: "http://www.amcharts.com/lib/3/images/",
+
+	colorSteps: 10,
+
+	dataProvider: {
+		map: "usaLow",
+		areas: [{
+			id: "US-AL",
+			value: 7.0
+		}, {
+			id: "US-AK",
+			value: 6.5
+		}, {
+			id: "US-AZ",
+			value: 7.0
+		}, {
+			id: "US-AR",
+			value: 6.2
+		}, {
+			id: "US-CA",
+			value: 7.4
+		}, {
+			id: "US-CO",
+			value: 5.3
+		}, {
+			id: "US-CT",
+			value: 6.6
+		}, {
+			id: "US-DE",
+			value: 6.2
+		}, {
+			id: "US-FL",
+			value: 6.2
+			
+		}, {
+			id: "US-GA",
+			value: 7.8
+		}, {
+			id: "US-HI",
+			value: 4.4
+		}, {
+			id: "US-ID",
+			value: 4.8
+		}, {
+			id: "US-IL",
+			value: 6.8
+		}, {
+			id: "US-IN",
+			value: 5.9
+		}, {
+			id: "US-IA",
+			value: 4.5
+		}, {
+			id: "US-KS",
+			value: 4.9
+		}, {
+			id: "US-KY",
+			value: 7.4
+		}, {
+			id: "US-LA",
+			value: 5.4
+		}, {
+			id: "US-ME",
+			value: 5.5
+		}, {
+			id: "US-MD",
+			value: 6.1
+		}, {
+			id: "US-MA",
+			value: 5.6
+		}, {
+			id: "US-MI",
+			value: 7.7
+		}, {
+			id: "US-MN",
+			value: 4.5
+		}, {
+			id: "US-MS",
+			value: 8.0
+		}, {
+			id: "US-MO",
+			value: 6.5
+		}, {
+			id: "US-MT",
+			value: 4.6
+		}, {
+			id: "US-NE",
+			value: 3.6
+		}, {
+			id: "US-NV",
+			value: 7.7
+		}, {
+			id: "US-NH",
+			value: 4.4
+		}, {
+			id: "US-NJ",
+			value: 6.5
+		}, {
+			id: "US-NM",
+			value: 6.6
+		}, {
+			id: "US-NY",
+			value: 6.6
+		}, {
+			id: "US-NC",
+			value: 6.5
+		}, {
+			id: "US-ND",
+			value: 2.8
+		}, {
+			id: "US-OH",
+			value: 5.7
+		}, {
+			id: "US-OK",
+			value: 4.6
+		}, {
+			id: "US-OR",
+			value: 6.9
+		}, {
+			id: "US-PA",
+			value: 5.7
+		}, {
+			id: "US-RI",
+			value: 7.7
+		}, {
+			id: "US-SC",
+			value: 5.7
+		}, {
+			id: "US-SD",
+			value: 3.7
+		}, {
+			id: "US-TN",
+			value: 7.1
+		}, {
+			id: "US-TX",
+			value: 5.1
+		}, {
+			id: "US-UT",
+			value: 3.6
+		}, {
+			id: "US-VT",
+			value: 3.7
+		}, {
+			id: "US-VA",
+			value: 5.4
+		}, {
+			id: "US-WA",
+			value: 5.6
+		}, {
+			id: "US-WV",
+			value: 6.3
+		}, {
+			id: "US-WI",
+			value: 5.8
+		}, {
+			id: "US-WY",
+			value: 4.4
+		}]
+	},
+
+	areasSettings: {
+		autoZoom: true
+	},
+
+	valueLegend: {
+		right: 10,
+		minValue: "Less",
+		maxValue: "More"
+	}
+
+});
+
+</script>
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		//$("a[title='Interactive JavaScript maps']").css('display','none');
+		setTimeout(function(){$("a[title='Interactive JavaScript maps']").css('display','none');}, 50);
+	});
+</script>
+<script type="text/javascript">
+	//console.log(workers[months[curr_month]]);
+	$(function()
+	{
+		setTimeout(curW, 500);
+	});
+	function curW()
+	{
+		var curWorkers = workers[months[curr_month]];
+		for(item in curWorkers)
+		{
+			if(item != 'no_of_workers')
+			{
+				per = Math.round((curWorkers[item]/curWorkers['no_of_workers'])*100);
+				html = "<li class='list-group-item' style='border:0px;'><span class='badge' style='background-color:black;'>"+per+" %</span>"+item+"</li>";
+				$('#currentWorkForce').append(html);
+			}
+		}
+	}
+</script>
+<script type="text/javascript" src="http://www.amcharts.com/lib/3/ammap.js"></script>
+<script type="text/javascript" src="http://www.amcharts.com/lib/3/maps/js/usaLow.js"></script>
+<script type="text/javascript" src="http://www.amcharts.com/lib/3/themes/light.js"></script>

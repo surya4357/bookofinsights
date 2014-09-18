@@ -1,0 +1,212 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="Book/examples/Insights/css/bootstrap.min.css">
+		<!-- <link rel="stylesheet" href="Book/examples/Insights/css/styles.css"> -->
+
+		
+		<style type="text/css">
+			${demo.css}
+			</style>
+		
+	</head>
+	<body>
+		<br>
+		<br>
+		<div class="col-md-8 col-md-offset-2 panel panel-default row">
+			<div class='panel-head'><h3>Work Force</h3><hr></div>
+			<div class='panel col-md-5'>
+				<div class="panel-body">
+					<div class="labeled-chart-container" id='prev'>
+						<h4>Previous Month</h4>
+						<div class="canvas-holder">
+							<canvas id="myChart1" width="200" height="200"></canvas>
+						</div>
+						<h5 align="center">Total : 210 </h5>
+					</div>
+				</div>
+			</div>
+			<div class='panel col-md-7'>
+				<div class="panel-body">
+					<div class="labeled-chart-container" id='this'>
+						<h4>This Month</h4>
+						<div class="canvas-holder">
+							<canvas id="myChart2" width="200" height="200"></canvas>
+						</div>
+						<h5>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Total : 262 </h5>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class='col-md-8 col-md-offset-2 panel panel-default row'>
+			<div class="heading"><h3>Monthly Statement</h3></div>
+
+
+			<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+			<table id="datatable" style="display:none;">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Inflow</th>
+						<th>Payroll</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Jan</th>
+						<td>20</td>
+						<td>14</td>
+					</tr>
+					<tr>
+						<th>Feb</th>
+						<td>30</td>
+						<td>25</td>
+					</tr>
+					<tr>
+						<th>Mar</th>
+						<td>35</td>
+						<td>32</td>
+					</tr>
+					<tr>
+						<th>Apr</th>
+						<td>38</td>
+						<td>39</td>
+					</tr>
+					<tr>
+						<th>May</th>
+						<td>48</td>
+						<td>46</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+	</body>
+	<script src="Book/js/highcharts.js"></script>
+	<script src="Book/js/modules/data.js"></script>
+	<script src="Book/js/modules/exporting.js"></script>
+	<script type="text/javascript" src='Book/examples/Insights/js/bootstrap.min.js'></script>
+	<script type="text/javascript" src='Book/examples/Insights/js/Chart.min.js'></script>
+	<script type="text/javascript">
+		var ctx = $("#myChart1").get(0).getContext("2d");
+		// This will get the first returned node in the jQuery collection.
+
+		var data = [
+				    {
+				        value: 150,
+				        color:"#F7464A",
+				        highlight: "#FF5A5E",
+				        label: "Child Care Worker"
+				    },
+				    {
+				        value: 10,
+				        color: "#46BFBD",
+				        highlight: "#5AD3D1",
+				        label: "Chief Executive Officer"
+				    },
+				    {
+				        value: 30,
+				        color: "#FDB45C",
+				        highlight: "#FFC870",
+				        label: "Auditor"
+				    },
+				    {
+				        value: 20,
+				        color: "#AE7CC5",
+				        highlight: "#B189C4",
+				        label: "Cashier"
+				    }
+					];
+		var options = {
+					    //Boolean - Whether we should show a stroke on each segment
+					    segmentShowStroke : true,
+
+					    //String - The colour of each segment stroke
+					    segmentStrokeColor : "#fff",
+
+					    //Number - The width of each segment stroke
+					    segmentStrokeWidth : 2,
+
+					    //Number - The percentage of the chart that we cut out of the middle
+					    percentageInnerCutout : 50, // This is 0 for Pie charts
+
+					    //Number - Amount of animation steps
+					    animationSteps : 100,
+
+					    //String - Animation easing effect
+					    animationEasing : "easeOutBounce",
+
+					    //Boolean - Whether we animate the rotation of the Doughnut
+					    animateRotate : true,
+
+					    //Boolean - Whether we animate scaling the Doughnut from the centre
+					    animateScale : false,
+
+					    //String - A legend template
+					    legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
+
+						}
+		var myNewChart = new Chart(ctx).Doughnut(data,options);
+		//$('#prev').append(myNewChart.generateLegend());
+
+		var data = [
+				    {
+				        value: 200,
+				        color:"#F7464A",
+				        highlight: "#FF5A5E",
+				        label: "Child Care Worker"
+				    },
+				    {
+				        value: 12,
+				        color: "#46BFBD",
+				        highlight: "#5AD3D1",
+				        label: "Chief Executive Officer"
+				    },
+				    {
+				        value: 35,
+				        color: "#FDB45C",
+				        highlight: "#FFC870",
+				        label: "Auditor"
+				    },
+				    {
+				        value: 15,
+				        color: "#AE7CC5",
+				        highlight: "#B189C4",
+				        label: "Cashier"
+				    }
+					];
+
+		ctx = $("#myChart2").get(0).getContext("2d");
+		myNewChart = new Chart(ctx).Doughnut(data,options);
+		$('#this').append(myNewChart.generateLegend());
+		
+	</script>
+	<script type="text/javascript">
+			$(function () {
+			    $('#container').highcharts({
+			        data: {
+			            table: document.getElementById('datatable')
+			        },
+			        chart: {
+			            type: 'column'
+			        },
+			        title: {
+			            text: ''
+			        },
+			        yAxis: {
+			            allowDecimals: false,
+			            title: {
+			                text: 'Thousand Dollars (K)'
+			            }
+			        },
+			        tooltip: {
+			            formatter: function () {
+			                return '<b>' + this.series.name + '</b><br/>' +
+			                    this.point.y + ' ' + this.point.name.toLowerCase();
+			            }
+			        }
+			    });
+			});
+			</script>
+</html>
